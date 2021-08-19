@@ -1,0 +1,16 @@
+@mixin banner ($url,$height){
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: $height;
+  }
+  
+  @mixin hideText {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+  }

@@ -42,7 +42,9 @@ function sass() {
   ];
   return gulp.src(envOptions.style.src)
     .pipe($.sourcemaps.init())
-    .pipe($.sass().on('error', $.sass.logError))
+    .pipe($.sass({
+      outputStyle: envOptions.style.outputStyle,
+    }).on('error', $.sass.logError))
     .pipe($.postcss(plugins))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest(envOptions.style.path))
@@ -51,6 +53,12 @@ function sass() {
         stream: true,
       }),
     );
+}
+
+function compileBootstrap() {
+  return gulp.src(envOptions.style.bsSrc)
+    .pipe($.sass().on('error', $.sass.logError))
+    .pipe(gulp.dest(envOptions.style.path))
 }
 
 function babel() {
@@ -79,9 +87,9 @@ function vendorsJs() {
 function browser() {
   browserSync.init({
     server: {
-      baseDir: envOptions.browserDir,
+      baseDir: envOptions.browserSetting.dir,
     },
-    port: 8080,
+    port: envOptions.browserSetting.port,
   });
 }
 
@@ -110,6 +118,9 @@ exports.deploy = deploy;
 
 exports.clean = clean;
 
-exports.build = gulp.series(clean, copyFile, layoutHTML, sass, babel, vendorsJs);
+exports.build = gulp.series(clean, copyFile, layoutHTML, compileBootstrap, sass, babel, vendorsJs);
 
-exports.default = gulp.series(clean, copyFile, layoutHTML, sass, babel, vendorsJs, gulp.parallel(browser, watch));
+exports.bs = gulp.series(compileBootstrap);
+
+
+exports.default = gulp.series(clean, copyFile, layoutHTML, compileBootstrap, sass, babel, vendorsJs, gulp.parallel(browser, watch));

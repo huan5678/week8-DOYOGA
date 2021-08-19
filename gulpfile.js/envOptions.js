@@ -11,6 +11,7 @@ let envOptions = {
     src: [
       `${srcPath}/**/*`,
       `!${srcPath}/assets/js/**/*.js`,
+      `!${srcPath}/assets/style/*`,
       `!${srcPath}/assets/style/**/*.scss`,
       `!${srcPath}/assets/style/**/*.sass`,
       `!${srcPath}/**/*.ejs`,
@@ -31,7 +32,13 @@ let envOptions = {
     src: [
       `${srcPath}/assets/style/**/*.scss`,
       `${srcPath}/assets/style/**/*.sass`,
+      `!${srcPath}/assets/style/**/_variables.scss`,
+      `!${srcPath}/assets/style/**/bootstrap.scss`,
     ],
+    bsSrc: [
+      `${srcPath}/assets/style/helpers/bootstrap.scss`,
+    ],
+    outputStyle: 'expanded',
     path: `${distPath}/assets/style`,
   },
   javascript: {
@@ -43,7 +50,13 @@ let envOptions = {
   },
   vendors: {
     src: [
-      `${nodePath}/jquery/dist/**/jquery.min.js`,
+      `${nodePath}/jquery/dist/jquery.slim.min.js`,
+      `${nodePath}/bootstrap/dist/js/bootstrap.bundle.min.js`, // 已包含 popper.js
+      `${nodePath}/aos/dist/aos.js`,
+      `${nodePath}/lax.js/lib/lax.min.js`,
+      `${nodePath}/@fortawesome/fontawesome-free/js/brands.js`,
+      `${nodePath}/@fortawesome/fontawesome-free/js/solid.js`,
+      `${nodePath}/@fortawesome/fontawesome-free/js/fontawesome.js`,
     ],
     concat: 'vendors.js',
     path: `${distPath}/assets/js`,
@@ -56,7 +69,10 @@ let envOptions = {
   clean: {
     src: distPath,
   },
-  browserDir: distPath,
+  browserSetting: {
+    dir: distPath,
+    port: 8080,
+  },
   deploySrc: `${distPath}/**/*`,
 };
 
