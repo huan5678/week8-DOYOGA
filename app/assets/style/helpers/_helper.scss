@@ -1,0 +1,15 @@
+.scroll--style {
+	&::-webkit-scrollbar {
+		width: 0;
+	}
+	&::-webkit-scrollbar-track {
+		background: tint-color($primary, 40%);
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: .25rem;
+		background: $primary;
+		&:hover {
+			background: shade-color($primary, 40%);
+		}
+	}
+}

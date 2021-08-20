@@ -32,7 +32,7 @@ let envOptions = {
     src: [
       `${srcPath}/assets/style/**/*.scss`,
       `${srcPath}/assets/style/**/*.sass`,
-      `!${srcPath}/assets/style/**/_variables.scss`,
+      `${srcPath}/assets/style/**/_variables.scss`,
       `!${srcPath}/assets/style/**/bootstrap.scss`,
     ],
     bsSrc: [

@@ -23,7 +23,8 @@ $utilities: map-merge(
             80: 80%,
             85: 85%,
             90: 90%,
-            95: 95%
+            95: 95%,
+            auto: auto
             )
         )
       ),
@@ -37,6 +38,12 @@ $utilities: map-merge(
         map-get($utilities,"align-items"),
         (
           class: items,
+        )
+      ),
+      "align-self": map-merge(
+        map-get($utilities,"align-self"),
+        (
+          class: self,
         )
       ),
       "font-weight": (
@@ -142,29 +149,43 @@ $utilities: map-merge(
       "color": map-merge(
         map-get($utilities,"color"),(
           state: hover,
-          local-vars: (
-            "text-opacity": auto
-          )
         )
       ),
-      "background-color": (
-      property: background-color,
-      state: hover,
-      class: bg,
-      local-vars: (
-        "bg-opacity": 1
-      ),
-      values: map-merge(
-        $utilities-bg-colors,
-        (
-          "transparent": transparent
+      "background-color": map-merge(
+        map-get($utilities,"background-color"),(
+          state: hover,
         )
-      )
     ),
       "object-fit":(
         property: object-fit,
         class: object,
         values: $object-fitVal,
       ),
+      "rounded": map-merge(
+        map-get($utilities,"rounded"),(
+          values: (
+            sm: .3rem,
+            md: 1rem,
+          )
+        )
+      )
     )
-  )
+  );
+
+  @each $color, $val in $theme-colors{
+    .ph-#{$color}{
+      &::placeholder {
+        color: $val !important;
+      }
+      &::-webkit-input-placeholder {
+        color: $val !important;
+      }
+      &:-ms-input-placeholder {
+        color: $val !important;
+      }
+      &::-moz-placeholder {
+        color: $val !important;
+        opacity: 1;
+      }
+    }
+  }

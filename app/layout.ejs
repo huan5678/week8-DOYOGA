@@ -21,10 +21,8 @@
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
-  <body>
-    <i class="fab fa-facebook"></i>
-    <i class="fab fa-instagram"></i>
-    <i class="fab fa-line"></i>
+  <body class="scroll--style">
+    
     <i class="fas fa-sort-down"></i>
     <i class="fas fa-caret-down"></i>
     <span class="material-icons-outlined">trending_flat</span>
@@ -33,86 +31,120 @@
     <span class="material-icons-outlined">west</span>
     <span class="material-icons-outlined">star</span>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Accordion Item #1
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
         </div>
       </div>
-    </nav>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Accordion Item #2
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Accordion Item #3
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Accordion Item #1
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
+  <iframe class="" frameborder="0" scrolling="no" loading="lazy"
+            marginheight="0" marginwidth="0" allowfullscreen
+            src="https://maps.google.com/maps?q=%E7%91%9C%E7%8F%88%E8%85%A6%E6%9C%A8&t=&z=17&ie=UTF8&iwloc=&output=embed">
+            </iframe>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">DOYOGA</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-between" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="course.html">課程介紹</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="surroundings.html">瑜珈空間</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="curriculum.html">當月課表</a>
+              </li>
+            </ul>
+            <div class="d-flex gap-2">
+              <button class="btn rounded-md btn-outline-primary text-light-hover text-opacity-100" type="button">立即預約</button>
+              <button class="btn rounded-md btn-outline-primary text-light-hover text-opacity-100" type="button">聯絡我們</button>
+            </div>
+          </div>
+        </div>
+      </nav>
     </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-</div>
+  </header>
+
 
     <%- contents %>
 
     <footer class="footer">
-      footer
+      <section class="container mb-3">
+      <div class="row items-lg-center">
+        <div class="col-md-6">
+          <h2 class="text-white fs-4 fw-regular mb-1">現在訂閱，獲得課程優惠碼！</h2>
+        </div>
+        <div class="col-md-6 offset-lg-2 col-lg-4">
+          <div class="input-group">
+            <input type="text" class="form-control ph-secondary" placeholder="輸入您的電子信箱">
+            <button class="btn btn-primary text-light" type="button">訂閱</button>
+          </div>
+        </div>
+      </div>
+      </section>
+      <div class="border-bottom border-white mb-3"></div>
+      <section class="container">
+        <div class="d-flex flex-wrap justify-between">
+          <ul class="col-6 col-md-4 order-1 d-flex justify-between flex-column gap-1 list-unstyled mb-0">
+            <h2 class=""><a href="index.html" class="logo">DOTOGA</a></h2>
+            <li><a href="course.html" class="link-white fw-light">課程介紹</a></li>
+            <li><a href="surroundings.html" class="link-white fw-light">瑜珈空間</a></li>
+            <li><a href="curriculum.html" class="link-white fw-light">當月課表</a></li>
+          </ul>
+          <div class="col-12 col-md-4 order-3 order-md-2 col-12 text-white self-end">© 2021. All Rights Reserved.</div>
+          <div class="col-6 col-md-4 order-2 order-md-3 d-flex justify-end gap-1 list-unstyled">
+            <a href="#" class="link-white">
+              <i class="fab fa-facebook fs-4"></i>
+            </a>
+            <a href="#" class="link-white">
+              <i class="fab fa-instagram fs-4"></i>
+            </a>
+            <a href="#" class="link-white">
+              <i class="fab fa-line fs-4"></i>
+            </a>
+          </div>
+        </div>
+      </section>
     </footer>
 
     <script src="./assets/js/vendors.js"></script>
