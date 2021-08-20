@@ -1,9 +1,9 @@
-@mixin banner ($url,$height){
-    background-image: url($url);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: $height;
+  @mixin banner ($url,$height){
+      background-image: url($url);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      min-height: $height;
   }
   
   @mixin hideText {
