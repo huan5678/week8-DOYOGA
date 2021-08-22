@@ -22,14 +22,12 @@
   </head>
 
   <body class="scroll--style">
-    
     <i class="fas fa-sort-down"></i>
     <i class="fas fa-caret-down"></i>
-    <span class="material-icons-outlined">trending_flat</span>
     <span class="material-icons-outlined">check_circle</span>
     <span class="material-icons-outlined">east</span>
     <span class="material-icons-outlined">west</span>
-    <span class="material-icons-outlined">star</span>
+    
 
     <div class="accordion" id="accordionExample">
     <div class="accordion-item">
@@ -75,40 +73,48 @@
             src="https://maps.google.com/maps?q=%E7%91%9C%E7%8F%88%E8%85%A6%E6%9C%A8&t=&z=17&ie=UTF8&iwloc=&output=embed">
             </iframe>
 
-  <header class="header">
+  <header class="bg-light">
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-expand-lg navbar-light py-0">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">DOYOGA</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand d-block overflow-hidden wh-nowrap bg-cover bg-no-repeat logo logo--primary" href="index.html">DOYOGA</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse justify-between" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div class="collapse navbar-collapse flex-grow-0">
+            <ul class="navbar-nav g-4 mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="course.html">課程介紹</a>
+                <a class="nav-link link-dark fw-light p-2.5" href="course.html">課程介紹</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="surroundings.html">瑜珈空間</a>
+                <a class="nav-link link-dark fw-light p-2.5" href="surroundings.html">瑜珈空間</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="curriculum.html">當月課表</a>
+                <a class="nav-link link-dark fw-light p-2.5" href="curriculum.html">當月課表</a>
               </li>
             </ul>
-            <div class="d-flex gap-2">
-              <button class="btn rounded-md btn-outline-primary text-light-hover text-opacity-100" type="button">立即預約</button>
-              <button class="btn rounded-md btn-outline-primary text-light-hover text-opacity-100" type="button">聯絡我們</button>
-            </div>
+          </div>
+          <div class="collapse navbar-collapse gap-2 flex-grow-0 py-2.5">
+            <button class="btn rounded-md btn-outline-secondary text-light-hover text-opacity-100" type="button">立即預約</button>
+            <button class="btn rounded-md btn-outline-secondary text-light-hover text-opacity-100" type="button">聯絡我們</button>
           </div>
         </div>
       </nav>
     </div>
   </header>
 
+    <main class="pos-relative">
+      <%- contents %>
+    <div class="pos-fixed top-50 end-0 translate-middle">
+      <ul class="d-none d-xl-flex flex-column justify-between list-unstyled">
+        <li class="gap-1"><a href="#" class="display-5"><i class="fab fa-facebook"></i></a></li>
+        <li class="gap-1"><a href="#" class="display-5"><i class="fab fa-instagram"></i></a></li>
+        <li class="gap-1"><a href="#" class="display-5"><i class="fab fa-line"></i></a></li>
+      </ul>
+    </div>
+    </main>
 
-    <%- contents %>
-
-    <footer class="footer">
+    <footer class="pt-3 pb-4 bg-secondary">
       <section class="container mb-3">
       <div class="row items-lg-center">
         <div class="col-md-6">
@@ -126,7 +132,7 @@
       <section class="container">
         <div class="d-flex flex-wrap justify-between">
           <ul class="col-6 col-md-4 order-1 d-flex justify-between flex-column gap-1 list-unstyled mb-0">
-            <h2 class=""><a href="index.html" class="logo">DOTOGA</a></h2>
+            <h2 class=""><a href="index.html" class="d-block overflow-hidden wh-nowrap bg-cover bg-no-repeat logo logo--white">DOTOGA</a></h2>
             <li><a href="course.html" class="link-white fw-light">課程介紹</a></li>
             <li><a href="surroundings.html" class="link-white fw-light">瑜珈空間</a></li>
             <li><a href="curriculum.html" class="link-white fw-light">當月課表</a></li>

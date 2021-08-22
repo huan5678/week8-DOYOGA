@@ -1,4 +1,10 @@
+*,*::after,*::before{
+  line-height: 1.5;
+}
 
 img {
-    vertical-align: middle !important;
-  }
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle !important;
+}
+

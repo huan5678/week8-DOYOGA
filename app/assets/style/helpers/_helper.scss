@@ -1,18 +1,22 @@
 .logo {
-	&--white {
-		background-image: url(../../images/DOYOGA-logo.png);
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+		width: 6rem;
+		height: 1.9375rem;
+	&--primary {
+		background-image: url('../images/DOYOGA-logo.png');
 		@include media-breakpoint-up(md){
-			background-image: url(../../images/DOYOGA-logo@2x.png);
+			background-image: url('../images/DOYOGA-logo@2x.png');
 		}
 	}
-	&--primary {
-		background-image: url(../../images/DOYOGA.png);
+	&--white {
+		background-image: url('../images/DOYOGA.png');
 		@include media-breakpoint-up(md){
-			background-image: url(../../images/DOYOGA@2x.png);
+			background-image: url('../images/DOYOGA@2x.png');
 		}
 	}
 }
-
 
 .scroll--style {
 	&::-webkit-scrollbar {
@@ -27,5 +31,27 @@
 		&:hover {
 			background: shade-color($primary, 40%);
 		}
+	}
+}
+
+.hero {
+	background-position: bottom;
+	background-image: url(../images/photo-1612157777902-5382bc6e864b.jpeg);
+	height: 35rem;
+	@include media-breakpoint-up(md){
+		height: 36.375rem;
+	}
+}
+
+.ms-minus {
+	@include media-breakpoint-up(lg){
+		margin-left: -5.9375rem;
+	}
+}
+
+.w-xl {
+	@include media-breakpoint-only(md){
+		width: 1080px;
+		max-width: 1080px;
 	}
 }

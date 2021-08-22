@@ -4,6 +4,7 @@ $utilities: map-merge(
       "position": map-merge(
         map-get($utilities,"position"),
         (
+          responsive: true,
           class: pos
         )
       ),
@@ -66,6 +67,7 @@ $utilities: map-merge(
       "font-size": map-merge(
         map-get($utilities,"font-size"),
         (
+          responsive: true,
           rfs: false,
         )
       ),
@@ -115,8 +117,7 @@ $utilities: map-merge(
         map-get($utilities,"height"),(
           responsive: true,
           values: (
-            1: 1px,
-            2: 2px,
+            $imgSizes
           )
         )
       ),
@@ -168,7 +169,45 @@ $utilities: map-merge(
             md: 1rem,
           )
         )
-      )
+      ),
+      "img-width":(
+        property: width,
+        class: w,
+        values: $imgSizes,
+      ),
+      "background-repeat": (
+        property: background-repeat,
+        class: bg,
+        values: (repeat, no-repeat, repeat-x, repeat-y, round, space)
+      ),
+      "background-size": (
+        property: background-size,
+        class: bg,
+        values: (auto, cover, contain)
+      ),
+      "background-position": (
+        property: background-position,
+        class: bg,
+        values: (
+          start: left,
+          end: right,
+          top: top,
+          center: center,
+          bottom: bottom,
+          start-bottom: left bottom,
+          start-top: left top,
+          end-bottom: right bottom,
+          end-top: right top,
+          start-center: left center,
+          end-center: right center,
+          center-center: center center,
+          )
+      ),
+      "background-attachment": (
+        property: background-attachment,
+        class: bg,
+        values: (fixed, local, scroll)
+      ),
     )
   );
 
@@ -187,5 +226,12 @@ $utilities: map-merge(
         color: $val !important;
         opacity: 1;
       }
+    }
+  }
+
+  @each $size, $val in $spacers{
+    .g-#{$size}{
+      --#{$variable-prefix}gutter-y: #{$val};
+      --#{$variable-prefix}gutter-x: #{$val};
     }
   }

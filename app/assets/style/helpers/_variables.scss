@@ -382,6 +382,7 @@ $spacers: (
   1:  (8/$base)*$spacer, 
   1\.25: (10/$base)*$spacer,
   1\.5:  (12/$base)*$spacer,
+  1\.875: (15/$base)*$spacer,
   2:  (16/$base)*$spacer, 
   2\.25: (18/$base)*$spacer,
   2\.5: (20/$base)*$spacer,
@@ -417,8 +418,9 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) 
 // scss-docs-start position-map
 $position-values: (
   0: 0,
+  47: 47%,
   50: 50%,
-  100: 100%
+  100: 100%,
 ) !default;
 // scss-docs-end position-map
 
@@ -427,7 +429,7 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-bg:                   $white !default;
-$body-color:                $gray-900 !default;
+$body-color:                $dark !default; //$gray-900 !default;
 $body-text-align:           null !default;
 
 // Utilities maps
@@ -515,7 +517,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           1.5rem !default;
+$grid-gutter-width:           1.875rem !default; //1.5rem !default;
 $grid-row-columns:            6 !default;
 
 $gutters: $spacers !default;
@@ -1294,8 +1296,8 @@ $placeholder-opacity-min:           .2 !default;
 $card-spacer-y:                     $spacer !default;
 $card-spacer-x:                     $spacer !default;
 $card-title-spacer-y:               $spacer * .5 !default;
-$card-border-width:                 $border-width !default;
-$card-border-color:                 rgba($black, .125) !default;
+$card-border-width:                 0 !default; //$border-width !default;
+$card-border-color:                 null !default; //rgba($black, .125) !default;
 $card-border-radius:                $border-radius !default;
 $card-box-shadow:                   null !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
@@ -1717,4 +1719,34 @@ $heightVal: (
   85: 85vh,
   90: 90vh,
   100: 100vh
+) !default;
+
+$imgSizes: (
+  78\.5: (628/$base)*$spacer,
+  55\.625: (445/$base)*$spacer,
+  55\.5: (444/$base)*$spacer,
+  52\.5: (420/$base)*$spacer,
+  52\.25: (418/$base)*$spacer,
+  43\.75: (350/$base)*$spacer,
+  42\.625: (341/$base)*$spacer,
+  33\.25: (266/$base)*$spacer,
+  31\.5: (252/$base)*$spacer,
+  30\.375: (243/$base)*$spacer,
+  29\.75: (238/$base)*$spacer,
+  27\.25: (218/$base)*$spacer,
+  27: (216/$base)*$spacer,
+  26\.25: (210/$base)*$spacer,
+  25\.875: (207/$base)*$spacer,
+  24\.5: (196/$base)*$spacer,
+  20\.625: (165/$base)*$spacer,
+  20\.125: (161/$base)*$spacer,
+  18\.75: (150/$base)*$spacer,
+  14\.625: (117/$base)*$spacer,
+  11\.75: (94/$base)*$spacer,
+  8\.5: (68/$base)*$spacer,
+  7\.5: (60/$base)*$spacer,
+  6: (48/$base)*$spacer,
+  67\.5: (540/$base)*$spacer,
+  20: (160/$base)*$spacer,
+
 ) !default;

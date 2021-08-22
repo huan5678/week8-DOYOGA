@@ -1,0 +1,35 @@
+
+.btn-primary {
+	@include button-variant(
+		$primary,
+		$primary,
+		$color: $white,
+		$hover-background: $secondary,
+		$hover-border: $secondary,
+		$hover-color: $white,
+		$active-background: shade-color($secondary, $btn-active-bg-shade-amount),
+		$active-border: shade-color($secondary, $btn-active-border-shade-amount),
+		$active-color: color-contrast($secondary),
+		$disabled-background: $secondary,
+		$disabled-border: $secondary,
+		$disabled-color: color-contrast($secondary)
+	)
+}
+
+.btn-light{
+	@include button-variant(
+		$light,
+		$light,
+		$color: $dark,
+		$hover-background: $primary,
+		$hover-border: $primary,
+		$hover-color: $white,
+		$active-background: shade-color($primary, $btn-active-bg-shade-amount),
+		$active-border: shade-color($primary, $btn-active-border-shade-amount),
+		$active-color: color-contrast($primary),
+		$disabled-background: $primary,
+		$disabled-border: $primary,
+		$disabled-color: color-contrast($primary)
+	)
+}
+
