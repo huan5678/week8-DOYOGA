@@ -20,7 +20,9 @@
 
 .scroll--style {
 	&::-webkit-scrollbar {
+		// display: none;
 		width: 0;
+		height: 0;
 	}
 	&::-webkit-scrollbar-track {
 		background: tint-color($primary, 40%);

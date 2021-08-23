@@ -1,0 +1,42 @@
+.link {
+	&--underline--white{
+		overflow: hidden;
+		padding-bottom: .5vh;
+		position: relative;
+		&::before {
+			background: $white;
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			transform-origin: left;
+			transform: scaleX(0);
+			transition: transform .2s ease-in-out;
+		}
+		&:hover::before,&:active::before,&:focus::before {
+			transform: scaleX(1);
+		}
+	}
+	&--underline--dark{
+		overflow: hidden;
+		padding-bottom: .5vh;
+		position: relative;
+		&::before {
+			background: $dark;
+			content: '';
+			position: absolute;
+			bottom: 15%;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			transform-origin: left;
+			transform: scaleX(0) ;
+			transition: transform .2s ease-in-out;
+		}
+		&:hover::before,&:active::before,&:focus::before {
+			transform: scaleX(1);
+		}
+	}
+}

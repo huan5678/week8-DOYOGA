@@ -1,0 +1,18 @@
+.breadcrumb {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  &-item {
+    border-radius: 1rem;
+    background-color: $light;
+    color: $secondary;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .active {
+    background-color: $secondary;
+    color: $white;
+  }
+}
