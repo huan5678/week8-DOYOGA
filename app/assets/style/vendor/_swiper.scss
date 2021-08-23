@@ -32,12 +32,9 @@
   }
 }
 .swiper-container-vertical > .swiper-wrapper {
-  @include media-breakpoint-up(lg){
   flex-direction: column;
-  }
 }
 .swiper-wrapper {
-  @include media-breakpoint-up(lg){
   position: relative;
   width: 100%;
   height: 100%;
@@ -45,7 +42,6 @@
   display: flex;
   transition-property: transform;
   box-sizing: content-box;
-  }
 }
 .swiper-container-android .swiper-slide,
 .swiper-wrapper {
@@ -69,13 +65,11 @@
   touch-action: pan-x;
 }
 .swiper-slide {
-  @include media-breakpoint-up(lg){
   flex-shrink: 0;
   width: 100%;
   height: 100%;
   position: relative;
   transition-property: transform;
-  }
 }
 .swiper-slide-invisible-blank {
   visibility: hidden;
@@ -189,7 +183,7 @@
 }
 .swiper-button-prev:after,
 .swiper-container-rtl .swiper-button-next:after {
-  content: 'prev';
+  content: west; // content: 'prev';
 }
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
@@ -198,7 +192,7 @@
 }
 .swiper-button-next:after,
 .swiper-container-rtl .swiper-button-prev:after {
-  content: 'next';
+  content: east; // content: 'next';
 }
 .swiper-button-prev.swiper-button-white,
 .swiper-button-next.swiper-button-white {

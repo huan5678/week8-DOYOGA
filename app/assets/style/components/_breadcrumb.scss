@@ -1,8 +1,11 @@
 .breadcrumb {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  @include make-row();
   &-item {
+    &::before{
+      float: none !important;
+      content: '' !important;
+    }
+    text-align: center;
     border-radius: 1rem;
     background-color: $light;
     color: $secondary;

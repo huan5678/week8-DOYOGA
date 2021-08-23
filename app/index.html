@@ -129,7 +129,7 @@ current: index
     <div class="d-block d-md-flex flex-md-column justify-center col-12 col-md-6 col-lg-5 order-1 order-md-3 mb-2">
       <h2 class="text-secondary fw-med fs-3 mb-0.5">舒適空間、靜心放鬆</h2>
       <p class="text-primary fs-5 mb-2">我們都渴望平靜安穩的生活，擁有一處能夠靜心的角落，安撫每天繁雜忙碌的心。</p>
-      <a href="course.html" class="link-secondary mb-2 d-flex items-center gap-1"><span>環境介紹</span><span class="material-icons-outlined">trending_flat</span></a>
+      <a href="course.html" class="link-secondary link--underline--secondary mb-2 d-flex items-center gap-1"><span>環境介紹</span><span class="material-icons-outlined">trending_flat</span></a>
     </div>
   </div>
 </section>
@@ -139,7 +139,7 @@ current: index
       <div class="col-md-6 col-lg-5 offset-lg-1">
         <h2 class="text-secondary fw-med fs-3 mb-0.5">精心設計、課程多元</h2>
         <p class="text-primary fs-5 mb-2">教師帶領多元課程，釋放壓力，與身心常見的緊繃不適溫柔和解。</p>
-        <a href="surroundings.html" class="link-secondary mb-2 d-flex items-center gap-1"><span>環境介紹</span><span class="material-icons-outlined">trending_flat</span></a>
+        <a href="surroundings.html" class="link-secondary link--underline--secondary mb-2 d-flex items-center gap-1"><span>環境介紹</span><span class="material-icons-outlined">trending_flat</span></a>
       </div>
       <div class="col-md-6 d-lg-none">
         <div class="row row-cols-2 row-cols-lg-1 flex-lg-nowrap g-2">
@@ -222,10 +222,10 @@ current: index
   </div>
 </section>
 <section class="bg-light pt-4 pb-6">
-  <div class="container">
+  <div class="container swiper-container customSwiper overflow-hidden">
     <h2 class="text-secondary text-center fw-med fs-3 mb-3">聽聽他們怎麼說</h2>
-    <ul class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-1 gy-md-2 gx-md-3.75 mb-1 mb-md-0 list-unstyled w-xl">
-      <li class="col">
+    <ul class="list-unstyled swiper-wrapper">
+      <li class="swiper-slide order-0 order-md-0">
         <div class="card rounded-md py-1.75 px-2">
           <div class="d-flex items-center g-2">
             <img src="./assets/images/user-1.png" alt="">
@@ -249,7 +249,7 @@ current: index
           </div>
         </div>
       </li>
-      <li class="col">
+      <li class="swiper-slide order-2 order-md-1">
         <div class="card rounded-md py-1.75 px-2">
           <div class="d-flex items-center g-2">
             <img src="./assets/images/user-2.png" alt="">
@@ -273,7 +273,7 @@ current: index
           </div>
         </div>
       </li>
-      <li class="col">
+      <li class="swiper-slide order-4 order-md-2">
         <div class="card rounded-md py-1.75 px-2">
           <div class="d-flex items-center g-2">
             <img src="./assets/images/user-3.png" alt="">
@@ -297,7 +297,7 @@ current: index
           </div>
         </div>
       </li>
-      <li class="col d-none d-md-block">
+      <li class="swiper-slide order-1 order-md-3">
         <div class="card rounded-md py-1.75 px-2">
           <div class="d-flex items-center g-2">
             <img src="./assets/images/user-4.png" alt="">
@@ -321,7 +321,7 @@ current: index
           </div>
         </div>
       </li>
-      <li class="col d-none d-md-block">
+      <li class="swiper-slide order-3 order-md-4">
         <div class="card rounded-md py-1.75 px-2">
           <div class="d-flex items-center g-2">
             <img src="./assets/images/user-5.png" alt="">
@@ -345,7 +345,7 @@ current: index
           </div>
         </div>
       </li>
-      <li class="col d-none d-md-block">
+      <li class="swiper-slide order-5 order-md-5">
         <div class="card rounded-md py-1.75 px-2">
           <div class="d-flex items-center g-2">
             <img src="./assets/images/uset-6.png" alt="">
@@ -370,13 +370,13 @@ current: index
         </div>
       </li>
     </ul>
-    <div class="d-flex d-md-none justify-between">
-      <a href="#" class="text-secondary disabled">
+    <div class="d-flex d-md-none justify-between items-center pos-relative pt-4 pt-md-0">
+      <a href="#" class="text-secondary swiper-button-prev">
         <span class="material-icons-outlined display-1">west</span>
       </a>
-        <a href="#" class="text-secondary">
-          <span class="material-icons-outlined display-1">east</span>
-        </a>
-      </div>
+      <a href="#" class="text-secondary swiper-button-next">
+        <span class="material-icons-outlined display-1">east</span>
+      </a>
+    </div>
   </div>
 </section>

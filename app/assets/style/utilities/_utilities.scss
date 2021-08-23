@@ -231,7 +231,7 @@ $utilities: map-merge(
 
   @each $size, $val in $spacers{
     .g-#{$size}{
-      --#{$variable-prefix}gutter-y: #{$val};
-      --#{$variable-prefix}gutter-x: #{$val};
+      --#{$variable-prefix}gutter-y: #{$val} !important;
+      --#{$variable-prefix}gutter-x: #{$val} !important;
     }
   }

@@ -71,12 +71,12 @@
             src="https://maps.google.com/maps?q=%E7%91%9C%E7%8F%88%E8%85%A6%E6%9C%A8&t=&z=17&ie=UTF8&iwloc=&output=embed">
             </iframe>
 
-  <header class="bg-light">
+  <header class="bg-light <% if(current === 'index' ){%> pos-sticky <% } %> top-0 z-750">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light py-0">
         <div class="container-fluid">
           <a class="navbar-brand d-block overflow-hidden wh-nowrap bg-cover bg-no-repeat logo logo--primary" href="index.html">DOYOGA</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler py-2.25" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse flex-grow-0">
@@ -103,7 +103,7 @@
 
     <main class="pos-relative">
       <%- contents %>
-    <div class="pos-fixed top-50 end-0 translate-middle">
+    <div class="pos-fixed top-50 end-0 translate-middle z-500">
       <ul class="d-none d-xl-flex flex-column justify-between list-unstyled">
         <li class="gap-1"><a href="#" class="display-5"><i class="fab fa-facebook"></i></a></li>
         <li class="gap-1"><a href="#" class="display-5"><i class="fab fa-instagram"></i></a></li>
@@ -129,7 +129,7 @@
       <div class="border-bottom border-white mb-3"></div>
       <section class="container">
         <div class="d-flex flex-wrap justify-between">
-          <ul class="col-6 col-md-4 order-1 d-flex justify-between flex-column gap-1 list-unstyled mb-0">
+          <ul class="col-6 col-md-4 order-1 d-flex justify-between flex-column gap-1 list-unstyled mb-1 mb-md-0">
             <h2 class=""><a href="index.html" class="d-block overflow-hidden wh-nowrap bg-cover bg-no-repeat logo logo--white">DOTOGA</a></h2>
             <li><a href="course.html" class="link-white link--underline--white fw-light">課程介紹</a></li>
             <li><a href="surroundings.html" class="link-white link--underline--white fw-light">瑜珈空間</a></li>

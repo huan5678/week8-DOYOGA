@@ -45,15 +45,9 @@
 	}
 }
 
+
 .ms-minus {
 	@include media-breakpoint-up(lg){
 		margin-left: -5.9375rem;
-	}
-}
-
-.w-xl {
-	@include media-breakpoint-only(md){
-		width: 1080px;
-		max-width: 1080px;
 	}
 }
