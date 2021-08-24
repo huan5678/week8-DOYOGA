@@ -4,7 +4,7 @@ layout: ./app/layout.ejs
 engine: ejs
 current: index
 ---
-<section class="hero bg-cover bg-no-repeat bg-fixed bg-bottom mb-4 mb-lg-5">
+<section class="h-70 h-md-72.75 bg-bottom bg-cover bg-no-repeat bg-fixed bg-bottom mb-4 mb-lg-5" style="background-image: url('./assets/images/photo-1612157777902-5382bc6e864b.jpeg');">
   <div class="container h-100">
     <div class="row h-100 items-center">
       <div class="offset-lg-1 col-md-8 col-lg-5">
@@ -31,8 +31,10 @@ current: index
   </p>
   <ul class="row g-2 g-md-3.75 list-unstyled">
     <li class="col-md-4">
-      <div class="card text-white">
-        <img src="./assets/images/photo-1593810450967-f9c42742e326.jpeg" class="rounded-md object-cover h-52.5 h-md-31.5 h-lg-52.5" loading="lazy">
+      <div class="card text-white overflow-hidden">
+        <div class="ratio ratio-3x4 h-100">
+          <img src="./assets/images/photo-1593810450967-f9c42742e326.jpeg" class="object-cover" loading="lazy">
+        </div>
         <div class="card-img-overlay">
           <div class="d-flex flex-column justify-end h-100 p-1">
             <h3 class="card-title fw-regular fs-5 fs-md-bs fs-lg-5 mb-0.5">整體健身</h3>
@@ -43,7 +45,7 @@ current: index
     </li>
     <li class="col-md-4">
       <div class="card text-white">
-        <img src="./assets/images/photo-1593810451137-5dc55105dace.jpeg" class="rounded-md object-cover h-52.5 h-md-31.5 h-lg-52.5" loading="lazy">
+        <img src="./assets/images/photo-1593810451137-5dc55105dace.jpeg" class="object-cover h-52.5 h-md-31.5 h-lg-52.5" loading="lazy">
         <div class="card-img-overlay">
           <div class="d-flex flex-column justify-end h-100 p-1">
             <h3 class="card-title fw-regular fs-5 fs-md-bs fs-lg-5 mb-0.5">減壓放鬆</h3>
@@ -54,7 +56,7 @@ current: index
     </li>
     <li class="col-md-4">
       <div class="card text-white">
-        <img src="./assets/images/photo-1599901860904-17e6ed7083a0.jpeg" class="rounded-md object-cover h-52.5 h-md-31.5 h-lg-52.5" loading="lazy">
+        <img src="./assets/images/photo-1599901860904-17e6ed7083a0.jpeg" class=" object-cover h-52.5 h-md-31.5 h-lg-52.5" loading="lazy">
         <div class="card-img-overlay">
           <div class="d-flex flex-column justify-end h-100 p-1">
             <h3 class="card-title fw-regular fs-5 fs-md-bs fs-lg-5 mb-0.5">局部雕塑</h3>
@@ -69,7 +71,7 @@ current: index
 <section class="bg-light mb-6 mb-md-7 mb-lg-8">
   <div class="container pt-4 pb-6 py-lg-8">
     <div class="row">
-      <div class="col-lg-6 d-none d-lg-block rounded-md bg-cover bg-no-repeat h-78.5" style="background-image: url('./assets/images/photo-1540206276207-3af25c08abc4.jpeg');">
+      <div class="col-lg-6 d-none d-lg-block  bg-cover bg-no-repeat h-78.5" style="background-image: url('./assets/images/photo-1540206276207-3af25c08abc4.jpeg');">
       </div>
       <div class="col-lg-6 py-3.75">
         <h2 class="text-secondary text-center text-lg-start fw-med fs-3 mb-0.5">
@@ -79,7 +81,7 @@ current: index
           強力師資，經歷豐富，協會認證。運用引導式教學，針對不同需求的人制定專屬課程。
         </p>
         <ul class="list-unstyled d-flex flex-column g-0 gap-2">
-          <li class="offset-md-1 offset-lg-0 card rounded-md p-2 py-md-5 px-md-6 ms-minus" data-bs-toggle="collapse" data-bs-target="#teacher-1">
+          <li class="offset-md-1 offset-lg-0 card  p-2 py-md-5 px-md-6 ms-minus" data-bs-toggle="collapse" data-bs-target="#teacher-1">
             <div class="d-flex gap-2 justify-between items-center">
               <img src="./assets/images/teacher-1.png" alt="Carol Tang 老師" class="rounded-circle mb-0.5" loading="lazy">
               <div class="card-body p-0">
@@ -89,7 +91,7 @@ current: index
               </div>
             </div>
           </li>
-          <li class="offset-md-3 offset-lg-0 card rounded-md p-2" data-bs-toggle="collapse" data-bs-target="#teacher-2">
+          <li class="offset-md-3 offset-lg-0 card  p-2" data-bs-toggle="collapse" data-bs-target="#teacher-2">
             <div class="d-flex gap-2 justify-between items-center">
               <img src="./assets/images/teacher-2.png" alt="Kanae 老師" class="rounded-circle mb-0.5" loading="lazy">
               <div class="card-body p-0">
@@ -99,7 +101,7 @@ current: index
               </div>
             </div>
           </li>
-          <li class="offset-md-3 offset-lg-0 card rounded-md p-2" data-bs-toggle="collapse" data-bs-target="#teacher-3">
+          <li class="offset-md-3 offset-lg-0 card  p-2" data-bs-toggle="collapse" data-bs-target="#teacher-3">
             <div class="d-flex gap-2 justify-between items-center">
               <img src="./assets/images/teacher-3.png" alt="Asa Ifrit 老師" class="rounded-circle mb-0.5" loading="lazy">
               <div class="card-body p-0">
@@ -118,12 +120,24 @@ current: index
 <section class="container mb-6 mb-md-7 mb-lg-8">
   <div class="row">
     <div class="col-6 col-md-4 order-2 order-md-1">
-      <img src="./assets/images/woman in green sports bra and green leggings doing yoga.jpg" loading="lazy" class="rounded-md w-100 object-cover h-26.25 h-md-33.25 h-lg-55.5">
+      <div class="card overflow-hidden">
+        <div class="ratio ratio-3x4 h-100">
+          <img src="./assets/images/woman in green sports bra and green leggings doing yoga.jpg" loading="lazy" class=" object-cover">
+        </div>
+      </div>
     </div>
     <div class="col-6 col-md-2 order-3 order-md-2">
       <div class="d-flex flex-column justify-between gap-4">
-        <img src="./assets/images/white round table near brown wooden chair.jpg" loading="lazy" class="rounded-md object-cover h-26.25 h-md-14.625 h-lg-25.875">
-        <img src="./assets/images/woman in black sports bra and blue denim jeans doing yoga.jpg" loading="lazy" class="d-none d-md-block rounded-md object-cover h-14.625 h-lg-25.875">
+        <div class="card overflow-hidden">
+          <div class="ratio ratio-3x4 h-100">
+            <img src="./assets/images/white round table near brown wooden chair.jpg" loading="lazy" class=" object-cover">
+          </div>
+        </div>
+        <div class="d-none d-md-block card overflow-hidden">
+          <div class="ratio ratio-3x4 h-100">
+            <img src="./assets/images/woman in black sports bra and blue denim jeans doing yoga.jpg" loading="lazy" class="object-cover">
+          </div>
+        </div>
       </div>
     </div>
     <div class="d-block d-md-flex flex-md-column justify-center col-12 col-md-6 col-lg-5 order-1 order-md-3 mb-2">
@@ -143,33 +157,41 @@ current: index
       </div>
       <div class="col-md-6 d-lg-none">
         <div class="row row-cols-2 row-cols-lg-1 flex-lg-nowrap g-2">
-          <div class="col overflow-hidden h-20.625 h-lg-55.625">
-            <img src="./assets/images/woman doing yoga beside wall.jpg" alt="" class="rounded-md object-cover h-100 w-100" loading="lazy">
+          <div class="col">
+            <div class="card overflow-hidden">
+              <div class="ratio ratio-1x1 h-100">
+                <img src="./assets/images/woman doing yoga beside wall.jpg" alt="" class=" object-cover" loading="lazy">
+              </div>
+            </div>
           </div>
-          <div class="col overflow-hidden h-20.625 h-lg-55.625">
-            <img src="./assets/images/woman in black tank top do yoga.jpg" alt="" class="rounded-md object-cover h-100 w-100" loading="lazy">
+          <div class="col">
+            <div class="card overflow-hidden">
+              <div class="ratio ratio-1x1 h-100">
+                <img src="./assets/images/woman in black tank top do yoga.jpg" alt="" class=" object-cover" loading="lazy">
+              </div>
+            </div>
           </div>
-          <div class="col overflow-hidden h-20.625 h-lg-55.625">
-            <img src="./assets/images/woman in black sports bra and black leggings doing yoga.jpg" alt="" class="rounded-md object-cover h-100 w-100" loading="lazy">
+          <div class="col overflow-hidden">
+            <img src="./assets/images/woman in black sports bra and black leggings doing yoga.jpg" alt="" class=" object-cover h-100 w-100" loading="lazy">
           </div>
-          <div class="col overflow-hidden h-20.625 h-lg-55.625">
-            <img src="./assets/images/woman in white tank top and white leggings bending her body.jpg" alt="" class="rounded-md object-cover h-100 w-100" loading="lazy">
+          <div class="col overflow-hidden">
+            <img src="./assets/images/woman in white tank top and white leggings bending her body.jpg" alt="" class=" object-cover h-100 w-100" loading="lazy">
           </div>
         </div>
       </div>
       <div class="col-md-6 d-none d-lg-block swiper-container desktopSwiper overflow-hidden">
         <div class="row row-cols-2 row-cols-lg-1 flex-lg-nowrap g-2 swiper-wrapper">
           <div class="col overflow-hidden h-20.625 h-lg-55.625 swiper-slide">
-            <img src="./assets/images/woman doing yoga beside wall.jpg" alt="" class="rounded-md object-cover h-100 w-100" loading="lazy">
+            <img src="./assets/images/woman doing yoga beside wall.jpg" alt="" class=" object-cover h-100 w-100" loading="lazy">
           </div>
           <div class="col overflow-hidden h-20.625 h-lg-55.625 swiper-slide">
-            <img src="./assets/images/woman in black tank top do yoga.jpg" alt="" class="rounded-md object-cover h-100 w-100" loading="lazy">
+            <img src="./assets/images/woman in black tank top do yoga.jpg" alt="" class=" object-cover h-100 w-100" loading="lazy">
           </div>
           <div class="col overflow-hidden h-20.625 h-lg-55.625 swiper-slide">
-            <img src="./assets/images/woman in black sports bra and black leggings doing yoga.jpg" alt="" class="rounded-md object-cover h-100 w-100" loading="lazy">
+            <img src="./assets/images/woman in black sports bra and black leggings doing yoga.jpg" alt="" class=" object-cover h-100 w-100" loading="lazy">
           </div>
           <div class="col overflow-hidden h-20.625 h-lg-55.625 swiper-slide">
-            <img src="./assets/images/woman in white tank top and white leggings bending her body.jpg" alt="" class="rounded-md object-cover h-100 w-100" loading="lazy">
+            <img src="./assets/images/woman in white tank top and white leggings bending her body.jpg" alt="" class=" object-cover h-100 w-100" loading="lazy">
           </div>
         </div>
       </div>
@@ -181,10 +203,12 @@ current: index
   <p class="text-primary text-center fs-5 mb-2 mb-md-3 mb-lg-4">DOYOGA 可以帶給你...</p>
   <div class="row g-2 g-md-3 g-lg-3.75">
     <div class="col-lg-4">
-      <div class="card border-1 border-primary">
+      <div class="card border-1 border-primary overflow-hidden">
         <div class="d-md-flex d-lg-block justify-between">
-            <img src="./assets/images/woman in white tank top and white leggings bending her body.jpg" alt="" class="card-img-top object-cover h-30.375 h-md-29.75 h-lg-30.375">
-            <div class="card-body p-3">
+          <div class="ratio ratio-4x3 h-100">
+            <img src="./assets/images/woman in white tank top and white leggings bending her body.jpg" alt="" class=" object-cover">
+          </div>
+            <div class="card-body">
               <h3 class="card-title text-center text-md-start text-lg-center text-secondary fw-regular fs-5 mb-0.5">首次體驗</h3>
               <p class="card-text text-center text-md-start text-lg-center text-primary fs-5 mb-1">NT $450 / 次</p>
               <p class="card-text text-primary mb-5 mb-md-3 mb-lg-5">分基礎、中級、高級可以選擇。初次至 DOYOGA 上課建議選擇此方案。</p>
@@ -194,10 +218,12 @@ current: index
       </div>
     </div>
     <div class="col-lg-4">
-      <div class="card border-1 border-primary">
+      <div class="card border-1 border-primary overflow-hidden">
         <div class="d-md-flex d-lg-block justify-between">
-          <img src="./assets/images/woman performing yoga.jpg" alt="" class="card-img-top object-cover h-30.375 h-md-29.75 h-lg-30.375">
-          <div class="card-body p-3">
+          <div class="ratio ratio-4x3 h-100">
+            <img src="./assets/images/woman performing yoga.jpg" alt="" class=" object-cover">
+          </div>
+          <div class="card-body">
             <h3 class="card-title text-center text-md-start text-lg-center text-secondary fw-regular fs-5 mb-0.5">短期體驗</h3>
             <p class="card-text text-center text-md-start text-lg-center text-primary fs-5 mb-1">NT $1880 / 月</p>
             <p class="card-text text-primary mb-5 mb-md-3 mb-lg-5">分基礎、中級、高級可以選擇。想試著培養瑜珈習慣者可以選擇此方案。</p>
@@ -207,10 +233,12 @@ current: index
       </div>
     </div>
     <div class="col-lg-4">
-      <div class="card border-1 border-primary">
+      <div class="card border-1 border-primary overflow-hidden">
         <div class="d-md-flex d-lg-block justify-between">
-          <img src="./assets/images/woman in blue leggings and black tank top doing yoga.jpg" alt="" class="card-img-top object-cover h-30.375 h-md-29.75 h-lg-30.375">
-          <div class="card-body p-3">
+          <div class="ratio ratio-4x3 h-100">
+            <img src="./assets/images/woman in blue leggings and black tank top doing yoga.jpg" alt="" class="object-cover">
+          </div>
+          <div class="card-body">
             <h3 class="card-title text-center text-md-start text-lg-center  text-secondary fw-regular fs-5 mb-0.5">長期體驗</h3>
             <p class="card-text text-center text-md-start text-lg-center  text-primary fs-5 mb-1">NT $5600 / 季</p>
             <p class="card-text text-primary mb-5 mb-md-3 mb-lg-5">分基礎、中級、高級可以選擇。有長期習慣做瑜伽者建議選擇此方案。</p>
@@ -226,7 +254,7 @@ current: index
     <h2 class="text-secondary text-center fw-med fs-3 mb-3">聽聽他們怎麼說</h2>
     <ul class="list-unstyled swiper-wrapper">
       <li class="swiper-slide order-0 order-md-0">
-        <div class="card rounded-md py-1.75 px-2">
+        <div class="card  py-1.75 px-2">
           <div class="d-flex items-center g-2">
             <img src="./assets/images/user-1.png" alt="">
             <div class="card-body">
@@ -250,7 +278,7 @@ current: index
         </div>
       </li>
       <li class="swiper-slide order-2 order-md-1">
-        <div class="card rounded-md py-1.75 px-2">
+        <div class="card  py-1.75 px-2">
           <div class="d-flex items-center g-2">
             <img src="./assets/images/user-2.png" alt="">
             <div class="card-body">
@@ -274,7 +302,7 @@ current: index
         </div>
       </li>
       <li class="swiper-slide order-4 order-md-2">
-        <div class="card rounded-md py-1.75 px-2">
+        <div class="card  py-1.75 px-2">
           <div class="d-flex items-center g-2">
             <img src="./assets/images/user-3.png" alt="">
             <div class="card-body">
@@ -298,7 +326,7 @@ current: index
         </div>
       </li>
       <li class="swiper-slide order-1 order-md-3">
-        <div class="card rounded-md py-1.75 px-2">
+        <div class="card  py-1.75 px-2">
           <div class="d-flex items-center g-2">
             <img src="./assets/images/user-4.png" alt="">
             <div class="card-body">
@@ -322,7 +350,7 @@ current: index
         </div>
       </li>
       <li class="swiper-slide order-3 order-md-4">
-        <div class="card rounded-md py-1.75 px-2">
+        <div class="card  py-1.75 px-2">
           <div class="d-flex items-center g-2">
             <img src="./assets/images/user-5.png" alt="">
             <div class="card-body">
@@ -346,7 +374,7 @@ current: index
         </div>
       </li>
       <li class="swiper-slide order-5 order-md-5">
-        <div class="card rounded-md py-1.75 px-2">
+        <div class="card  py-1.75 px-2">
           <div class="d-flex items-center g-2">
             <img src="./assets/images/uset-6.png" alt="">
             <div class="card-body">

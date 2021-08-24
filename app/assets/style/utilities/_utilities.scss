@@ -141,6 +141,7 @@ $utilities: map-merge(
         values: (
           0: 0,
           25: .25,
+          30: .3,
           50: .5,
           67: .67,
           75: .75,
@@ -162,14 +163,20 @@ $utilities: map-merge(
         class: object,
         values: $object-fitVal,
       ),
-      "rounded": map-merge(
-        map-get($utilities,"rounded"),(
-          values: (
-            sm: .3rem,
-            md: 1rem,
-          )
-        )
-      ),
+      "rounded": (
+      property: border-radius,
+      class: rounded,
+      values: (
+        null: $border-radius,
+        0: 0,
+        1: $border-radius-sm,
+        2: $border-radius,
+        3: $border-radius-lg,
+        bs: $spacer,
+        circle: 50%,
+        pill: $border-radius-pill
+      )
+    ),
       "img-width":(
         property: width,
         class: w,

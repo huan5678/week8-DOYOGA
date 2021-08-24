@@ -579,6 +579,7 @@ $transition-collapse-width:   width .35s ease !default;
 // scss-docs-start aspect-ratios
 $aspect-ratios: (
   "1x1": 100%,
+  "3x4": calc(4 / 3 * 100%),
   "4x3": calc(3 / 4 * 100%),
   "16x9": calc(9 / 16 * 100%),
   "21x9": calc(9 / 21 * 100%)
@@ -1294,12 +1295,12 @@ $placeholder-opacity-min:           .2 !default;
 // Cards
 
 // scss-docs-start card-variables
-$card-spacer-y:                     $spacer !default;
-$card-spacer-x:                     $spacer !default;
+$card-spacer-y:                     1.5rem !default; //$spacer !default;
+$card-spacer-x:                     1.5rem !default; //$spacer !default;
 $card-title-spacer-y:               $spacer * .5 !default;
 $card-border-width:                 0 !default; //$border-width !default;
 $card-border-color:                 null !default; //rgba($black, .125) !default;
-$card-border-radius:                $border-radius !default;
+$card-border-radius:                $spacer !default; //$border-radius !default;
 $card-box-shadow:                   null !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                $card-spacer-y * .5 !default;
@@ -1724,6 +1725,9 @@ $heightVal: (
 
 $imgSizes: (
   78\.5: (628/$base)*$spacer,
+  72\.75: (582/$base)*$spacer,
+  70: (560/$base)*$spacer,
+  67\.5: (540/$base)*$spacer,
   55\.625: (445/$base)*$spacer,
   55\.5: (444/$base)*$spacer,
   52\.5: (420/$base)*$spacer,
@@ -1741,13 +1745,12 @@ $imgSizes: (
   24\.5: (196/$base)*$spacer,
   20\.625: (165/$base)*$spacer,
   20\.125: (161/$base)*$spacer,
+  20: (160/$base)*$spacer,
   18\.75: (150/$base)*$spacer,
   14\.625: (117/$base)*$spacer,
   11\.75: (94/$base)*$spacer,
   8\.5: (68/$base)*$spacer,
   7\.5: (60/$base)*$spacer,
   6: (48/$base)*$spacer,
-  67\.5: (540/$base)*$spacer,
-  20: (160/$base)*$spacer,
 
 ) !default;

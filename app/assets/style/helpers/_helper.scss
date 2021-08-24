@@ -36,16 +36,6 @@
 	}
 }
 
-.hero {
-	background-position: bottom;
-	background-image: url(../images/photo-1612157777902-5382bc6e864b.jpeg);
-	height: 35rem;
-	@include media-breakpoint-up(md){
-		height: 36.375rem;
-	}
-}
-
-
 .ms-minus {
 	@include media-breakpoint-up(lg){
 		margin-left: -5.9375rem;
