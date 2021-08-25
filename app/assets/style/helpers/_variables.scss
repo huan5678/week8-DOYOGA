@@ -582,6 +582,7 @@ $aspect-ratios: (
   "3x4": calc(4 / 3 * 100%),
   "4x3": calc(3 / 4 * 100%),
   "16x9": calc(9 / 16 * 100%),
+  "11x14": calc(11 / 14 * 100%),
   "21x9": calc(9 / 21 * 100%)
 ) !default;
 // scss-docs-end aspect-ratios
@@ -933,7 +934,7 @@ $form-check-transition:                   null !default;
 $form-check-input-active-filter:          brightness(90%) !default;
 
 $form-check-input-bg:                     $input-bg !default;
-$form-check-input-border:                 1px solid rgba($black, .25) !default;
+$form-check-input-border:                 1px solid $primary !default; //1px solid rgba($black, .25) !default;
 $form-check-input-border-radius:          .25em !default;
 $form-check-radio-border-radius:          50% !default;
 $form-check-input-focus-border:           $input-focus-border-color !default;

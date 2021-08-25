@@ -58,21 +58,21 @@ function chooseCourse(dw){
       $("#shortCourse").toggleClass("d-none");
       $("#longCourse").toggleClass("d-none");
       $(this).toggleClass("border-4");
-      $('#courseName').text("首次")
+      $('.courseName').text("首次")
     })
 
     $("#shortCourse").click(function(){
       $("#experienceCourse").toggleClass("d-none");
       $("#longCourse").toggleClass("d-none");
       $(this).toggleClass("border-4");
-      $('#courseName').text("短期")
+      $('.courseName').text("短期")
     })
 
     $("#longCourse").click(function(){
       $("#shortCourse").toggleClass("d-none");
       $("#experienceCourse").toggleClass("d-none");
       $(this).toggleClass("border-4");
-      $('#courseName').text("長期")
+      $('.courseName').text("長期")
     })
   }
 }
@@ -86,15 +86,15 @@ $("#classBasic").click(function(){
 if(selectRange !== true){
     $(this).find(".checkBtn").removeClass("opacity-30");
     $(this).addClass("border-4 border-white");
-    if ($('#courseRange')[0].innerText.length === 0){
-      $('#courseRange').text("基礎")
+    if ($('.courseRange')[0].innerText.length === 0){
+      $('.courseRange').text("基礎")
     }
     selectRange = true
   } else {
     $("*").find(".checkBtn").addClass("opacity-30");
     $("*").find(".border-4").removeClass("border-4 border-white");
-    if ($('#courseRange')[0].innerText.length !== 0){
-      $('#courseRange').empty()
+    if ($('.courseRange')[0].innerText.length !== 0){
+      $('.courseRange').empty()
     }
     selectRange = false
   }
@@ -103,15 +103,15 @@ $("#classIntermediate").click(function(){
   if(selectRange !== true){
   $(this).find(".checkBtn").removeClass("opacity-30");
   $(this).addClass("border-4 border-white");
-  if ($('#courseRange')[0].innerText.length === 0){
-    $('#courseRange').text("中階")
+  if ($('.courseRange')[0].innerText.length === 0){
+    $('.courseRange').text("中階")
   }
   selectRange = true
 } else {
   $("*").find(".checkBtn").addClass("opacity-30");
   $("*").find(".border-4").removeClass("border-4 border-white");
-  if ($('#courseRange')[0].innerText.length !== 0){
-    $('#courseRange').empty()
+  if ($('.courseRange')[0].innerText.length !== 0){
+    $('.courseRange').empty()
   }
   selectRange = false
 }
@@ -120,16 +120,24 @@ $("#classAdvanced").click(function(){
   if(selectRange !== true){
     $(this).find(".checkBtn").removeClass("opacity-30");
     $(this).addClass("border-4 border-white");
-    if ($('#courseRange')[0].innerText.length === 0){
-      $('#courseRange').text("高階")
+    if ($('.courseRange')[0].innerText.length === 0){
+      $('.courseRange').text("高階")
     }
     selectRange = true
   } else {
     $("*").find(".checkBtn").addClass("opacity-30");
     $("*").find(".border-4").removeClass("border-4 border-white");
-    if ($('#courseRange')[0].innerText.length !== 0){
-      $('#courseRange').empty()
+    if ($('.courseRange')[0].innerText.length !== 0){
+      $('.courseRange').empty()
     }
     selectRange = false
   }
+})
+
+
+const inputDate = document.querySelector('input[name="datePicker"]');
+const datepicker = new Datepicker(inputDate,{
+  nextArrow: ' >',
+	prevArrow: ' <',
+	buttonClass: 'btn text-primary',
 })

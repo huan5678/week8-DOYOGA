@@ -215,6 +215,18 @@ $utilities: map-merge(
         class: bg,
         values: (fixed, local, scroll)
       ),
+      "gap-x": (
+      responsive: true,
+      property: column-gap,
+      class: gap-x,
+      values: $spacers
+    ),
+    "gap-y": (
+      responsive: true,
+      property: row-gap,
+      class: gap-y,
+      values: $spacers
+    ),
     )
   );
 

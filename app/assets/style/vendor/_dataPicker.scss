@@ -1,0 +1,20 @@
+.form-control {
+	color: $secondary;
+	border: 1px solid$primary;
+}
+
+.datepicker-cell.selected, .datepicker-cell.selected:hover {
+  background-color: $secondary;
+}
+
+.dow, .day {
+	color: $secondary;
+}
+
+.next {
+	color:$primary !important;
+}
+
+.datepicker-picker {
+	border: 1px solid$primary !important;
+}

@@ -43,6 +43,7 @@
     "morgan": "^1.9.1",
     "node-sass": "^4.14.1",
     "popper.js": "^1.16.1",
-    "swiper": "^6.8.4"
+    "swiper": "^6.8.4",
+    "vanillajs-datepicker": "^1.1.4"
   }
 }

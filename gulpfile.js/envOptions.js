@@ -58,6 +58,7 @@ let envOptions = {
       `${nodePath}/@fortawesome/fontawesome-free/js/brands.js`,
       `${nodePath}/@fortawesome/fontawesome-free/js/solid.js`,
       `${nodePath}/@fortawesome/fontawesome-free/js/fontawesome.js`,
+      `${nodePath}/vanillajs-datepicker/dist/js/datepicker-full.js`,
     ],
     concat: 'vendors.js',
     path: `${distPath}/assets/js`,
