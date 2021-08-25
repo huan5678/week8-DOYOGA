@@ -134,6 +134,14 @@ $("#classAdvanced").click(function(){
   }
 })
 
+$(".nextBtn").click(function(){
+  $("#step-1").removeClass("active");
+  $("#step-2").addClass("active");
+  $("#listCollapse").removeClass("show");
+  $("#page-1-list").addClass("collapse");
+  $("#page-1").addClass("collapse");
+  $("#page-1-info").addClass("collapse");
+})
 
 const inputDate = document.querySelector('input[name="datePicker"]');
 const datepicker = new Datepicker(inputDate,{

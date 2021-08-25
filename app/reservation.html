@@ -10,9 +10,9 @@ current: reservation
     <section class="container">
       <h1 class="text-secondary text-center fw-regular fs-3 mb-3 mb-md-2">立即預約</h1>
       <div class="breadcrumb g-0 gap-2 mb-4">
-        <div class="col offset-md-3 col-md-2 breadcrumb-item active">選擇方案</div>
-        <div class="col col-md-2 breadcrumb-item">填寫資料</div>
-        <div class="col col-md-2 breadcrumb-item">完成預約</div>
+        <div id="step-1" class="col offset-md-3 col-md-2 breadcrumb-item active">選擇方案</div>
+        <div id="step-2" class="col col-md-2 breadcrumb-item">填寫資料</div>
+        <div id="step-3" class="col col-md-2 breadcrumb-item">完成預約</div>
       </div>
       <div id="page-1-list" class="row gap-2 gap-md-3 gap-lg-0 mb-5 mb-md-6 mb-lg-4">
           <div class="col-lg-4" id="experienceCourse">
@@ -62,126 +62,127 @@ current: reservation
           </div>
       </div>
 
-      <div id="page-2">
+      <div id="page-2" class="collapse">
         <h2 class="text-secondary text-center fw-regular fs-bs mb-4">
           <span class="me-2">你選擇的是</span>
           <span class="text-primary fs-5">
             <span class="courseName"></span>體驗課程-<span class="courseRange"></span>
           </span>
         </h2>
-
-        <form action="">
-          <ol class="row">
-            <li class="mb-4 col-md-4">
-              <label class="form-label mb-2">是否接觸過瑜珈？</label>
-              <div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="ContactOption1">
-                  <label class="form-check-label" for="inlineRadio1">是</label>
+        <div class="row">
+          <form action="" class="offset-md-3 offset-lg-4 col-md-6 col-lg-4">
+            <ul class="list-unstyled">
+              <li class="mb-4">
+                <label class="form-label mb-2">1.是否接觸過瑜珈？</label>
+                <div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="ContactOption1">
+                    <label class="form-check-label" for="inlineRadio1">是</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="ContactOption2">
+                    <label class="form-check-label" for="inlineRadio2">否</label>
+                  </div>
                 </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="ContactOption2">
-                  <label class="form-check-label" for="inlineRadio2">否</label>
+              </li>
+              <li class="mb-4">
+                <label class="form-label mb-2">2.想改善的生活問題？</label>
+                <div class="mb-2">
+                  <div class="row flex-md-nowrap justify-md-between">
+                    <div class="col-4 d-md-inline-flex">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="lifeOption1">
+                        <label class="form-check-label wh-nowrap" for="inlineCheckbox1">肌耐力不足</label>
+                      </div>
+                    </div>
+                    <div class="col-4 d-md-inline-flex">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="lifeOption2">
+                        <label class="form-check-label wh-nowrap" for="inlineCheckbox2">柔軟度不佳</label>
+                      </div>
+                    </div>
+                    <div class="col-4 d-md-inline-flex">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="lifeOption3">
+                        <label class="form-check-label wh-nowrap" for="inlineCheckbox3">壓力大</label>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="mb-4 col-md-4">
-              <label class="form-label mb-2">想改善的生活問題？</label>
-              <div class="mb-2">
                 <div class="row">
-                  <div class="col-4">
+                  <div class="col-4 d-md-inline-flex">
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="lifeOption1">
-                      <label class="form-check-label" for="inlineCheckbox1">肌耐力不足</label>
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="lifeOption4">
+                      <label class="form-check-label wh-nowrap " for="inlineCheckbox4">姿勢不正</label>
                     </div>
                   </div>
-                  <div class="col-4">
+                  <div class="col-4 d-md-inline-flex">
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="lifeOption2">
-                      <label class="form-check-label" for="inlineCheckbox2">柔軟度不佳</label>
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="lifeOption5">
+                      <label class="form-check-label wh-nowrap" for="inlineCheckbox5">睡眠品質差</label>
                     </div>
                   </div>
-                  <div class="col-4">
+                  <div class="col-4 d-md-inline-flex">
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="lifeOption3">
-                      <label class="form-check-label" for="inlineCheckbox3">壓力大</label>
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="lifeOption6">
+                      <label class="form-check-label wh-nowrap" for="inlineCheckbox6">注意力不足</label>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-4">
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="lifeOption4">
-                    <label class="form-check-label" for="inlineCheckbox4">姿勢不正</label>
+              </li>
+              <li class="mb-4">
+                <label class="form-label mb-2">3.每週累積運動量約為多少？</label>
+                <div class="mb-2 row">
+                  <div class="col-6">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" id="inlineradio1" name="radioGroup" value="timeOption1">
+                      <label class="form-check-label wh-nowrap" for="inlineradio1">150 分鐘以上</label>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" id="inlineradio2" name="radioGroup"  value="timeOption2">
+                      <label class="form-check-label wh-nowrap" for="inlineradio2">75~150 分鐘</label>
+                    </div>
                   </div>
                 </div>
-                <div class="col-4">
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="lifeOption5">
-                    <label class="form-check-label" for="inlineCheckbox5">睡眠品質差</label>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" id="inlineradio3" name="radioGroup"  value="timeOption3">
+                      <label class="form-check-label wh-nowrap" for="inlineradio3">30~75 分鐘</label>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" id="inlineradio4" name="radioGroup"  value="timeOption4">
+                      <label class="form-check-label wh-nowrap" for="inlineradio4">30 分鐘以下</label>
+                    </div>
                   </div>
                 </div>
-                <div class="col-4">
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="lifeOption6">
-                    <label class="form-check-label" for="inlineCheckbox6">注意力不足</label>
+              </li>
+              <li class="mb-4">
+                <label class="form-label mb-0.5" for="datePicker">4.上課預約報到日</label>
+                <p class="mb-1 small">若還沒有確定的日期，可以等待專員與您聯絡時在做詳細的諮詢哦！</p>
+                <div class="row">
+                  <div class="col-auto">
+                    <input type="text" class="form-control" placeholder="MM/DD/YYYY" name="datePicker">
                   </div>
                 </div>
-              </div>
-            </li>
-            <li class="mb-4 col-md-4">
-              <label class="form-label mb-2">每週累積運動量約為多少？</label>
-              <div class="mb-2 row">
-                <div class="col-6">
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="inlineradio1" name="radioGroup" value="timeOption1">
-                    <label class="form-check-label" for="inlineradio1">150 分鐘以上</label>
+              </li>
+              <li class="">
+                <label class="form-label mb-2">5.填寫基本資料，完成預約後會寄送通知至電子信箱</label>
+                <div class="d-flex justify-between gap-1">
+                  <div class="w-100">
+                    <label for="inputName" class="form-label text-primary">姓名</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="請輸入您的姓名">
+                  </div>
+                  <div class="w-100">
+                    <label for="inputAge" class="form-label text-primary">年齡</label>
+                    <input type="number" class="form-control" id="inputAge" placeholder="請輸入您的年齡">
                   </div>
                 </div>
-                <div class="col-6">
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="inlineradio2" name="radioGroup"  value="timeOption2">
-                    <label class="form-check-label" for="inlineradio2">75~150 分鐘</label>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="inlineradio3" name="radioGroup"  value="timeOption3">
-                    <label class="form-check-label" for="inlineradio3">30~75 分鐘</label>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="inlineradio4" name="radioGroup"  value="timeOption4">
-                    <label class="form-check-label" for="inlineradio4">30 分鐘以下</label>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="mb-4 col-8 col-md-4">
-              <label class="form-label mb-0.5" for="datePicker">上課預約報到日</label>
-              <p class="mb-1 small">若還沒有確定的日期，可以等待專員與您聯絡時在做詳細的諮詢哦！</p>
-              <div class="row">
-                <div class="col-auto">
-                  <input type="text" class="form-control" placeholder="MM/DD/YYYY" name="datePicker">
-                </div>
-              </div>
-            </li>
-            <li>
-              <label class="form-label mb-2">填寫基本資料，完成預約後會寄送通知至電子信箱</label>
-              <div class="row gap-y-2">
-                <div class="col-6">
-                  <label for="inputName" class="form-label text-primary">姓名</label>
-                  <input type="text" class="form-control" id="inputName" placeholder="請輸入您的姓名">
-                </div>
-                <div class="col-6">
-                  <label for="inputAge" class="form-label text-primary">年齡</label>
-                  <input type="number" class="form-control" id="inputAge" placeholder="請輸入您的年齡">
-                </div>
-                <div class="col-2">
+                <div class="mb-2">
                   <label for="inputGender" class="form-label text-primary">性別</label>
                   <select id="inputGender" class="form-select">
                     <option selected>女</option>
@@ -189,22 +190,62 @@ current: reservation
                     <option>×</option>
                   </select>
                 </div>
-                <div class="col-md-4">
+                <div class="mb-2">
                   <label for="inputEmail" class="form-label text-primary">電子信箱</label>
                   <input type="email" class="form-control" id="inputEmail" placeholder="email@example.com">
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="mb-4">
                   <label for="inputPhone" class="form-label text-primary">手機號碼</label>
                   <input type="tel" class="form-control" id="inputPhone" placeholder="0912-345-678">
                 </div>
-                <div class="col-md-4">
+                <div class="">
                   <button type="submit" class="btn btn-primary w-100">送出</button>
                 </div>
-              </div>
-            </li>
-          </ol>
-        </form>
+              </li>
+            </ul>
+          </form>
+        </div>
 
+      </div>
+
+      <div id="page-3" class="">
+        <div class="d-flex justify-center">
+          <span class="material-icons-outlined display-1 mb-2.5">check_circle</span>
+        </div>
+        <h2 class="text-secondary text-center fs-5 mb-4">
+          已完成預約，以下是您的預約資訊:
+        </h2>
+        <div class="accordion mb-3" id="productOrder">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#orderInfo">
+                預約資訊
+              </button>
+            </h3>
+            <div id="orderInfo" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#productOrder">
+              <div class="accordion-body">
+                <h3 class="text-secondary text-center fw-regular fs-bs mb-2">
+                    <span class="me-2">你預約的是</span>
+                    <span class="text-primary fs-5">
+                      <span class="courseName"></span>體驗課程-<span class="courseRange"></span>
+                    </span>
+                </h3>
+                <ul class="list-unstyled text-seocndary d-flex flex-column gap-1">
+                  <li>上課預約報到日：2021/07/21</li>
+                  <li>預約人：Joanne Chen</li>
+                  <li>年齡：18 歲</li>
+                  <li>性別：女</li>
+                  <li>電子信箱：example123@gmail.com</li>
+                  <li>手機號碼：0912-345-678</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="text-seocndary text-center fw-regular fs-5 mb-1">上課注意事項</h2>
+        <p class="text-seocndary mb-4">第一次上課請提前 10-15 分鐘至櫃檯報到，請攜帶毛巾、水 .穿著運動服、乾淨室內運動鞋。 如欲更改體驗時間請提前通知我們喔！</p>
+
+        <a href="index.html" class="btn btn-primary w-100">返回首頁</a>
       </div>
     </section>
     
@@ -290,7 +331,7 @@ current: reservation
       </div>
       <div class="row collapse" id="continueBtn">
         <div class="co-md-4">
-          <div class="pt-4"><a href="" class="btn btn-primary w-100">繼續預約</a></div>
+          <div class="pt-4"><a href="#page-2" class="btn btn-primary w-100 nextBtn" data-bs-toggle="collapse">繼續預約</a></div>
         </div>
       </div>
     </section>

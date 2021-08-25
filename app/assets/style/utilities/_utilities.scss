@@ -177,11 +177,6 @@ $utilities: map-merge(
         pill: $border-radius-pill
       )
     ),
-      "img-width":(
-        property: width,
-        class: w,
-        values: $imgSizes,
-      ),
       "background-repeat": (
         property: background-repeat,
         class: bg,
@@ -227,6 +222,12 @@ $utilities: map-merge(
       class: gap-y,
       values: $spacers
     ),
+    "whitespace": map-merge(
+      map-get($utilities,"white-space"),(
+      responsive: true,
+      class: wh,
+      )
+    )
     )
   );
 

@@ -59,4 +59,12 @@
 			transform: scaleX(1);
 		}
 	}
+
+	&__icon{
+		transition: all .3s ease;
+		&:hover{
+			transform: translateY(-.5rem);
+		}
+	}
 }
+
