@@ -255,3 +255,9 @@ $utilities: map-merge(
       --#{$variable-prefix}gutter-x: #{$val} !important;
     }
   }
+
+.ratio-3x2 {
+  @include media-breakpoint-up(md){
+    --bs-aspect-ratio: 100%;
+  }
+}

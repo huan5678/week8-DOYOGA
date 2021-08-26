@@ -141,65 +141,92 @@ longCourse.click(()=>{
 
 function chooseCourse(e){
 
-  if (e.matches) {
-    console.log('screen match')
     expCourse.click(function(){
-        shortCourse.toggleClass("d-none");
-        longCourse.toggleClass("d-none");
+      // console.log(expStatus)
+      if (expStatus){
+        if(e.matches){
+          shortCourse.addClass("d-none");
+          longCourse.addClass("d-none");
+        }
+      } else {
+        if (e.matches){
+          shortCourse.removeClass("d-none");
+          longCourse.removeClass("d-none");
+        }
+      }
     })
     shortCourse.click(function(){
-        expCourse.toggleClass("d-none");
-        longCourse.toggleClass("d-none");
+      // console.log(shortStatus)
+      if (shortStatus){
+        if (e.matches){
+          expCourse.addClass("d-none");
+          longCourse.addClass("d-none");
+        }
+      } else {
+        if (e.matches){
+          expCourse.removeClass("d-none");
+          longCourse.removeClass("d-none");
+        }
+      }
     })
     longCourse.click(function(){
-        shortCourse.toggleClass("d-none");
-        expCourse.toggleClass("d-none");
+      // console.log(longStatus)
+      if (longStatus){
+        if (e.matches){
+          shortCourse.addClass("d-none");
+          expCourse.addClass("d-none");
+        }
+      } else {
+        if (e.matches){
+          shortCourse.removeClass("d-none");
+          expCourse.removeClass("d-none");
+        }
+      }
     })
-  } else {
-      switch (choose) {
-        case 'exp':
-          shortCourse.removeClass("d-none");
-          longCourse.removeClass("d-none");
-          break;
-        case 'short':
-          expCourse.removeClass("d-none");
-          longCourse.removeClass("d-none");
-          break;
-        case 'long':
-          shortCourse.removeClass("d-none");
-          expCourse.removeClass("d-none");
-        default:
-          break;
-      }
-  }
-  chooseSwiper = new Swiper(".chooseSwiper",{
-    slidesPerView: 1,
-    slidesPerColumn: 3,
-    spaceBetween: 24,
-    breakpoints: {
-      768: {
-        slidesPerView: 1.8,
-        slidesPerColumn: 1,
-        spaceBetween: 30,
-      },
-      960: {
-        slidesPerView: 3,
-        slidesPerColumn: 1,
-        spaceBetween: 20,
-      }
-    }
-  })
-  console.log(choose);
-
 }
-
 
 chooseCourse(screen)
 
 $(window).resize(()=>{
-  chooseCourse(screen)
+  if(screen.matches){
+    console.log('screen change')
+    switch (choose) {
+      case 'exp':
+        shortCourse.addClass("d-none");
+        longCourse.addClass("d-none");
+        break;
+      case 'short':
+        expCourse.addClass("d-none");
+        longCourse.addClass("d-none");
+        break;
+      case 'long':
+        shortCourse.addClass("d-none");
+        expCourse.addClass("d-none");
+        break;
+      default:
+        break;
+    }
+  } else {
+    switch (choose) {
+      case 'exp':
+        shortCourse.removeClass("d-none");
+        longCourse.removeClass("d-none");
+        break;
+      case 'short':
+        expCourse.removeClass("d-none");
+        longCourse.removeClass("d-none");
+        break;
+      case 'long':
+        shortCourse.removeClass("d-none");
+        expCourse.removeClass("d-none");
+        break;
+      default:
+        break;
+    }
+  }
+
 })
-// screen.addListener(chooseCourse)
+screen.addListener(chooseCourse)
 
 $("#experienceCourse").click(function(){
   $(this).children().toggleClass("border-4");
@@ -217,7 +244,7 @@ $("#longCourse").click(function(){
 let selectRange = false;
 
 $("#classBasic").click(function(){
-if(selectRange !== true){
+if (selectRange !== true){
     $(this).find(".checkBtn").removeClass("opacity-30");
     $(this).addClass("border-4 border-white");
     if ($('.courseRange')[0].innerText.length === 0){
@@ -234,7 +261,7 @@ if(selectRange !== true){
   }
 })
 $("#classIntermediate").click(function(){
-  if(selectRange !== true){
+  if (selectRange !== true){
   $(this).find(".checkBtn").removeClass("opacity-30");
   $(this).addClass("border-4 border-white");
   if ($('.courseRange')[0].innerText.length === 0){
@@ -251,7 +278,7 @@ $("#classIntermediate").click(function(){
 }
 })
 $("#classAdvanced").click(function(){
-  if(selectRange !== true){
+  if (selectRange !== true){
     $(this).find(".checkBtn").removeClass("opacity-30");
     $(this).addClass("border-4 border-white");
     if ($('.courseRange')[0].innerText.length === 0){
@@ -288,9 +315,3 @@ $("#orderForm").on('submit',function(e){
   $("#page-2").removeClass("show");
 })
 
-const inputDate = document.querySelector('input[name="datePicker"]');
-const datepicker = new Datepicker(inputDate,{
-  nextArrow: ' >',
-	prevArrow: ' <',
-	buttonClass: 'btn text-primary',
-})
