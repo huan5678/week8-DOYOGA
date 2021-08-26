@@ -1,3 +1,25 @@
+const header = document.querySelector('header');
+let lastScroll = 0;
+window.addEventListener('scroll',function(){
+  const currentScroll = window.pageYOffset;
+
+  if(currentScroll <= 0){
+    header.classList.remove('scroll--up');
+    return;
+  }
+
+  if(currentScroll > lastScroll && !header.classList.contains('scroll--down')){
+    // console.log('down !')
+    header.classList.remove('scroll--up');
+    header.classList.add('scroll--down');
+  } else if(currentScroll < lastScroll && header.classList.contains('scroll--down')){
+    // console.log('up !')
+    header.classList.remove('scroll--down');
+    header.classList.add('scroll--up');
+  }
+  lastScroll = currentScroll;
+})
+
 
 const swiper = new Swiper(".desktopSwiper", {
   scrollbar: {
@@ -29,7 +51,7 @@ const customSwiper = new Swiper(".customSwiper",{
   }
 })
 
-const chooseSwiper = new Swiper(".chooseSwiper",{
+let chooseSwiper = new Swiper(".chooseSwiper",{
   slidesPerView: 1,
   slidesPerColumn: 3,
   spaceBetween: 24,
@@ -39,8 +61,9 @@ const chooseSwiper = new Swiper(".chooseSwiper",{
       slidesPerColumn: 1,
       spaceBetween: 30,
     },
-    1200: {
+    960: {
       slidesPerView: 3,
+      slidesPerColumn: 1,
       spaceBetween: 20,
     }
   }
@@ -50,35 +73,146 @@ $("button.navbar-toggler").click(function(){
   $(this).children().toggleClass("navbar-toggler-icon-close");
 })
 
-let screen = window.matchMedia("(max-width: 991px)")
+// function chooseCourse(){
+//   if ($(window).width() < 769) {
+//     $("#experienceCourse").click(function(){
+//       $("#shortCourse").toggleClass("d-none");
+//       $("#longCourse").toggleClass("d-none");
+//     })
 
-function chooseCourse(dw){
-  if (dw.matches) {
-    $("#experienceCourse").click(function(){
-      $("#shortCourse").toggleClass("d-none");
-      $("#longCourse").toggleClass("d-none");
-      $(this).toggleClass("border-4");
-      $('.courseName').text("首次")
-    })
+//     $("#shortCourse").click(function(){
+//       $("#experienceCourse").toggleClass("d-none");
+//       $("#longCourse").toggleClass("d-none");
+//     })
 
-    $("#shortCourse").click(function(){
-      $("#experienceCourse").toggleClass("d-none");
-      $("#longCourse").toggleClass("d-none");
-      $(this).toggleClass("border-4");
-      $('.courseName').text("短期")
-    })
+//     $("#longCourse").click(function(){
+//       $("#shortCourse").toggleClass("d-none");
+//       $("#experienceCourse").toggleClass("d-none");
+//     })
+//   }
+// }
+// setInterval(() => {
+//   $(window).resize(function(){
+//     chooseCourse()
+//   })
+// }, 1000);
+// chooseCourse()
 
-    $("#longCourse").click(function(){
-      $("#shortCourse").toggleClass("d-none");
-      $("#experienceCourse").toggleClass("d-none");
-      $(this).toggleClass("border-4");
-      $('.courseName').text("長期")
-    })
+let screen = window.matchMedia("(max-width: 769px)")
+
+let choose = ''
+let expStatus = false
+let shortStatus = false
+let longStatus = false
+
+let expCourse = $("#experienceCourse");
+
+let shortCourse = $("#shortCourse");
+
+let longCourse = $("#longCourse");
+
+expCourse.click(()=>{
+  if (choose === 'exp'){
+    choose = ''
+    expStatus = false
+  } else {
+    choose = 'exp'
+    expStatus = true
   }
+})
+shortCourse.click(()=>{
+  if (choose === 'short'){
+    choose = ''
+    shortStatus = false
+  } else {
+    choose = 'short'
+    shortStatus = true
+  }
+})
+longCourse.click(()=>{
+  if (choose === 'long'){
+    choose = ''
+    longStatus = false
+  } else {
+    choose = 'long'
+    longStatus = true
+  }
+})
+
+function chooseCourse(e){
+
+  if (e.matches) {
+    console.log('screen match')
+    expCourse.click(function(){
+        shortCourse.toggleClass("d-none");
+        longCourse.toggleClass("d-none");
+    })
+    shortCourse.click(function(){
+        expCourse.toggleClass("d-none");
+        longCourse.toggleClass("d-none");
+    })
+    longCourse.click(function(){
+        shortCourse.toggleClass("d-none");
+        expCourse.toggleClass("d-none");
+    })
+  } else {
+      switch (choose) {
+        case 'exp':
+          shortCourse.removeClass("d-none");
+          longCourse.removeClass("d-none");
+          break;
+        case 'short':
+          expCourse.removeClass("d-none");
+          longCourse.removeClass("d-none");
+          break;
+        case 'long':
+          shortCourse.removeClass("d-none");
+          expCourse.removeClass("d-none");
+        default:
+          break;
+      }
+  }
+  chooseSwiper = new Swiper(".chooseSwiper",{
+    slidesPerView: 1,
+    slidesPerColumn: 3,
+    spaceBetween: 24,
+    breakpoints: {
+      768: {
+        slidesPerView: 1.8,
+        slidesPerColumn: 1,
+        spaceBetween: 30,
+      },
+      960: {
+        slidesPerView: 3,
+        slidesPerColumn: 1,
+        spaceBetween: 20,
+      }
+    }
+  })
+  console.log(choose);
+
 }
 
+
 chooseCourse(screen)
-screen.addListener(chooseCourse)
+
+$(window).resize(()=>{
+  chooseCourse(screen)
+})
+// screen.addListener(chooseCourse)
+
+$("#experienceCourse").click(function(){
+  $(this).children().toggleClass("border-4");
+  $('.courseName').text("首次");
+})
+$("#shortCourse").click(function(){
+  $(this).children().toggleClass("border-4");
+  $('.courseName').text("短期");
+})
+$("#longCourse").click(function(){
+  $(this).children().toggleClass("border-4");
+  $('.courseName').text("長期");
+})
 
 let selectRange = false;
 
@@ -134,6 +268,10 @@ $("#classAdvanced").click(function(){
   }
 })
 
+$(".orderBtn").click(function(){
+    $('#page-1-list').toggleClass('mb-5 mb-md-6 mb-lg-4');
+})
+
 $(".nextBtn").click(function(){
   $("#step-1").removeClass("active");
   $("#step-2").addClass("active");
@@ -141,6 +279,13 @@ $(".nextBtn").click(function(){
   $("#page-1-list").addClass("collapse");
   $("#page-1").addClass("collapse");
   $("#page-1-info").addClass("collapse");
+})
+
+$("#orderForm").on('submit',function(e){
+  e.preventDefault();
+  $("#step-2").removeClass("active");
+  $("#step-3").addClass("active");
+  $("#page-2").removeClass("show");
 })
 
 const inputDate = document.querySelector('input[name="datePicker"]');

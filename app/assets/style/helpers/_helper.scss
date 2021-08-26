@@ -49,3 +49,15 @@
 		margin-left: -5.9375rem;
 	}
 }
+
+
+.scroll {
+	&--up {
+		filter: drop-shadow(0 -10px 20px rgba($dark,0.25));
+	}
+
+	&--down {
+		transform: translate3d(0, -100%, 0);
+	}
+
+}
