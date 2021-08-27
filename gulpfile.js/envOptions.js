@@ -10,7 +10,6 @@ let envOptions = {
   copyFile: {
     src: [
       `${srcPath}/**/*`,
-      `!${srcPath}/assets/js/*.js`,
       `!${srcPath}/assets/js/**/*.js`,
       `!${srcPath}/assets/style/*`,
       `!${srcPath}/assets/style/**/*.scss`,

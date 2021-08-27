@@ -12,7 +12,9 @@ $utilities: map-merge(
         map-get($utilities,"width"),
         (
           responsive: true,
-          values:(
+          values: map-merge(
+          map-get(map-get($utilities, "width"), "values"),
+          (
             30: 30%,
             35: 35%,
             40: 40%,
@@ -26,7 +28,8 @@ $utilities: map-merge(
             90: 90%,
             95: 95%,
             auto: auto
-            )
+          ),
+        )
         )
       ),
       "justify-content": map-merge(
@@ -227,7 +230,17 @@ $utilities: map-merge(
       responsive: true,
       class: wh,
       )
-    )
+    ),
+    "list-style": (
+      property: list-style-type,
+      class: list,
+      values: (
+        disc: disc,
+        circle: circle,
+        square: square,
+        decimal: decimal,
+      )
+    ),
     )
   );
 

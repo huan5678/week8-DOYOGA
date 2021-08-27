@@ -29,7 +29,7 @@ const swiper = new Swiper(".desktopSwiper", {
 });
 
 const customSwiper = new Swiper(".customSwiper",{
-  slidesPerView: .98,
+  slidesPerView: 1,
   slidesPerColumn: 3,
   spaceBetween: 8,
   slidesPerColumnFill: 'row',
@@ -73,30 +73,6 @@ $("button.navbar-toggler").click(function(){
   $(this).children().toggleClass("navbar-toggler-icon-close");
 })
 
-// function chooseCourse(){
-//   if ($(window).width() < 769) {
-//     $("#experienceCourse").click(function(){
-//       $("#shortCourse").toggleClass("d-none");
-//       $("#longCourse").toggleClass("d-none");
-//     })
-
-//     $("#shortCourse").click(function(){
-//       $("#experienceCourse").toggleClass("d-none");
-//       $("#longCourse").toggleClass("d-none");
-//     })
-
-//     $("#longCourse").click(function(){
-//       $("#shortCourse").toggleClass("d-none");
-//       $("#experienceCourse").toggleClass("d-none");
-//     })
-//   }
-// }
-// setInterval(() => {
-//   $(window).resize(function(){
-//     chooseCourse()
-//   })
-// }, 1000);
-// chooseCourse()
 
 let screen = window.matchMedia("(max-width: 769px)")
 
@@ -315,3 +291,21 @@ $("#orderForm").on('submit',function(e){
   $("#page-2").removeClass("show");
 })
 
+const teacherSwiper = new Swiper(".teacherListSwiper",{
+  slidesPerView: 1,
+  slidesPerColumn: 4,
+  spaceBetween: 72,
+  slidesPerColumnFill: 'row',
+  breakpoints:{
+    768: {
+      slidesPerView: 2,
+      slidesPerColumn: 1,
+      spaceBetween: 30,
+    },
+    1200: {
+      slidesPerView: 3,
+      slidesPerColumn: 1,
+      spaceBetween: 30,
+    }
+  }
+})

@@ -1726,6 +1726,11 @@ $heightVal: (
 ) !default;
 
 $imgSizes: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+  auto: auto,
   78\.5: (628/$base)*$spacer,
   72\.75: (582/$base)*$spacer,
   70: (560/$base)*$spacer,
