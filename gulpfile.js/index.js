@@ -118,9 +118,12 @@ exports.deploy = deploy;
 
 exports.clean = clean;
 
-exports.build = gulp.series(clean, copyFile, layoutHTML, compileBootstrap, sass, babel, vendorsJs);
+// exports.build = gulp.series(clean, copyFile, layoutHTML, compileBootstrap, sass, babel, vendorsJs);
 
-exports.bs = gulp.series(compileBootstrap);
+// exports.bs = gulp.series(compileBootstrap);
 
+// exports.default = gulp.series(clean, copyFile, layoutHTML, compileBootstrap, sass, babel, vendorsJs, gulp.parallel(browser, watch));
 
-exports.default = gulp.series(clean, copyFile, layoutHTML, compileBootstrap, sass, babel, vendorsJs, gulp.parallel(browser, watch));
+exports.build = gulp.series(clean, copyFile, layoutHTML,  sass, babel, vendorsJs);
+
+exports.default = gulp.series(clean, copyFile, layoutHTML,  sass, babel, vendorsJs, gulp.parallel(browser, watch));

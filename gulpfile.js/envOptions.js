@@ -35,9 +35,9 @@ let envOptions = {
       `${srcPath}/assets/style/**/_variables.scss`,
       `!${srcPath}/assets/style/**/bootstrap.scss`,
     ],
-    bsSrc: [
-      `${srcPath}/assets/style/helpers/bootstrap.scss`,
-    ],
+    // bsSrc: [
+    //   `${srcPath}/assets/style/helpers/bootstrap.scss`,
+    // ],
     outputStyle: 'expanded',
     path: `${distPath}/assets/style`,
   },
@@ -59,6 +59,7 @@ let envOptions = {
       `${nodePath}/@fortawesome/fontawesome-free/js/solid.js`,
       `${nodePath}/@fortawesome/fontawesome-free/js/fontawesome.js`,
       `${nodePath}/vanillajs-datepicker/dist/js/datepicker-full.js`,
+      `${nodePath}/jquery-mousewheel/jquery.mousewheel.js`,
     ],
     concat: 'vendors.js',
     path: `${distPath}/assets/js`,

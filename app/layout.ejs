@@ -21,13 +21,7 @@
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
-  <body class="scroll--style">
-
-
-  <iframe class="" frameborder="0" scrolling="no" loading="lazy"
-            marginheight="0" marginwidth="0" allowfullscreen
-            src="https://maps.google.com/maps?q=%E7%91%9C%E7%8F%88%E8%85%A6%E6%9C%A8&t=&z=17&ie=UTF8&iwloc=&output=embed">
-            </iframe>
+  <body class="scroll--none">
 
   <header class="bg-light pos-sticky w-100 top-0 z-500">
     <div class="container">
@@ -38,21 +32,23 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse flex-grow-0">
-            <ul class="navbar-nav g-4 mb-2 mb-lg-0">
+            <ul class="navbar-nav gap-2">
               <li class="nav-item">
-                <a class="nav-link link-dark link--underline--dark fw-light p-2.5" href="course.html">課程介紹</a>
+                <a class="nav-link link-dark link--underline--dark fw-light p-2.5 fs-5 fs-lg-bs" href="course.html">課程介紹</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link link-dark link--underline--dark fw-light p-2.5" href="surroundings.html">瑜珈空間</a>
+                <a class="nav-link link-dark link--underline--dark fw-light p-2.5 fs-5 fs-lg-bs" href="surroundings.html">瑜珈空間</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link link-dark link--underline--dark fw-light p-2.5" href="curriculum.html">當月課表</a>
+                <a class="nav-link link-dark link--underline--dark fw-light p-2.5 fs-5 fs-lg-bs" href="curriculum.html">當月課表</a>
               </li>
             </ul>
           </div>
-          <div class="collapse navbar-collapse gap-2 flex-grow-0 py-2.5">
-            <a class="btn rounded-bs btn-outline-secondary text-light-hover text-opacity-100" href="reservation.html">立即預約</a>
-            <a class="btn rounded-bs btn-outline-secondary text-light-hover text-opacity-100" href="#">聯絡我們</a>
+          <div class="collapse navbar-collapse flex-grow-0 py-2.5">
+            <div class="d-flex gap-2 ">
+            <a class="btn rounded-bs btn-outline-secondary text-light-hover text-opacity-100 w-100 fs-5 fs-lg-bs" href="reservation.html">立即預約</a>
+            <a class="btn rounded-bs btn-outline-secondary text-light-hover text-opacity-100 w-100 fs-5 fs-lg-bs" href="contact.html">聯絡我們</a>
+            </div>
           </div>
         </div>
       </nav>
@@ -63,9 +59,9 @@
       <%- contents %>
     <div class="pos-fixed top-50 end-0 translate-middle z-500">
       <ul class="d-none d-xl-flex flex-column justify-between list-unstyled">
-        <li class="gap-1"><a href="#" class="display-5"><i class="fab fa-facebook"></i></a></li>
-        <li class="gap-1"><a href="#" class="display-5"><i class="fab fa-instagram"></i></a></li>
-        <li class="gap-1"><a href="#" class="display-5"><i class="fab fa-line"></i></a></li>
+        <li class="gap-1"><a href="#" class="display-5 link-secondary"><i class="fab fa-facebook"></i></a></li>
+        <li class="gap-1"><a href="#" class="display-5 link-secondary"><i class="fab fa-instagram"></i></a></li>
+        <li class="gap-1"><a href="#" class="display-5 link-secondary"><i class="fab fa-line"></i></a></li>
       </ul>
     </div>
     </main>

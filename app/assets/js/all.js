@@ -21,54 +21,6 @@ window.addEventListener('scroll',function(){
 })
 
 
-const swiper = new Swiper(".desktopSwiper", {
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    hide: true,
-  },
-});
-
-const customSwiper = new Swiper(".customSwiper",{
-  slidesPerView: 1,
-  slidesPerColumn: 3,
-  spaceBetween: 8,
-  slidesPerColumnFill: 'row',
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints:{
-    768: {
-      slidesPerView: 2.1,
-      slidesPerColumn: 2,
-      spaceBetween: 30,
-    },
-    1200: {
-      slidesPerView: 3,
-      slidesPerColumn: 2,
-      spaceBetween: 30,
-    }
-  }
-})
-
-let chooseSwiper = new Swiper(".chooseSwiper",{
-  slidesPerView: 1,
-  slidesPerColumn: 3,
-  spaceBetween: 24,
-  breakpoints: {
-    768: {
-      slidesPerView: 1.8,
-      slidesPerColumn: 1,
-      spaceBetween: 30,
-    },
-    960: {
-      slidesPerView: 3,
-      slidesPerColumn: 1,
-      spaceBetween: 20,
-    }
-  }
-})
-
 $("button.navbar-toggler").click(function(){
   $(this).children().toggleClass("navbar-toggler-icon-close");
 })
@@ -291,21 +243,85 @@ $("#orderForm").on('submit',function(e){
   $("#page-2").removeClass("show");
 })
 
-const teacherSwiper = new Swiper(".teacherListSwiper",{
-  slidesPerView: 1,
-  slidesPerColumn: 4,
-  spaceBetween: 72,
-  slidesPerColumnFill: 'row',
-  breakpoints:{
-    768: {
-      slidesPerView: 2,
-      slidesPerColumn: 1,
-      spaceBetween: 30,
-    },
-    1200: {
-      slidesPerView: 3,
-      slidesPerColumn: 1,
-      spaceBetween: 30,
-    }
-  }
+$(".scroll--style").mousewheel(function(e,time){
+  this.scrollLeft -= (time*100);
+  e.preventDefault();
 })
+
+AOS.init({
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 130, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 800, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: true, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+});
+
+window.onload = function () {
+
+  lax.init()
+
+  lax.addDriver('scrollY', function () {
+    return window.scrollY
+  })
+
+  lax.addElements('.lax-slide-right',{
+    scrollY: {
+      translateX: [
+        ["elInY", "elCenterY", "elOutY"],
+        // [0, 'screenWidth/2', 'screenWidth'],
+        [0, 80, 160],
+      ]
+    }
+  })
+
+  lax.addElements('.lax-slide-left',{
+    scrollY: {
+      translateX: [
+        ["elInY", "elCenterY", "elOutY"],
+        [0, -80, -160],
+      ]
+    }
+  })
+
+  lax.addElements('.lax-slide-bg-right',{
+    scrollY: {
+      translateX: [
+        ["elInY", "elCenterY", "elOutY"],
+        [0, 80, 160],
+      ],
+      scale: [
+        ["elInY", "elCenterY", "elOutY"],
+        [1.4, 1.3, 1.2],
+      ]
+    }
+  })
+
+  lax.addElements('.lax-slide-bg-left',{
+    scrollY: {
+      translateX: [
+        ["elInY", "elCenterY", "elOutY"],
+        [0, -80, -160],
+      ],
+      scale: [
+        ["elInY", "elCenterY", "elOutY"],
+        [1.4, 1.3, 1.2],
+      ]
+    }
+  })
+
+}

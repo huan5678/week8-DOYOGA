@@ -1,0 +1,42 @@
+---
+title: 聯絡我們 - DOYOGA
+layout: ./app/layout.ejs
+engine: ejs
+current: contact
+---
+<section class="container pt-6 pt-md-8 pb-11 pb-md-10 pb-lg-13.75">
+  <h1 class="text-secondary text-center fw-med fw-md-regular fw-lg-med fs-3 mb-3 mb-md-4">聯絡我們</h1>
+  <div class="row">
+    <div class="text-secondary offset-md-1 offset-lg-0 col-md-10 col-lg-6" data-aos="fade-right">
+      <div class="ratio ratio-23x13 mb-3">
+        <iframe class="rounded-bs" frameborder="0" scrolling="no" loading="lazy"
+          marginheight="0" marginwidth="0" allowfullscreen
+          src="https://maps.google.com/maps?q=%E7%91%9C%E7%8F%88%E8%85%A6%E6%9C%A8&t=&z=17&ie=UTF8&iwloc=&output=embed">
+        </iframe>
+      </div>
+      <h2 class="fw-regular fs-4 mb-1">DOYOGA 教室位置</h2>
+      <p>高雄市苓雅區北信街 23 號 2 樓</p>
+      <p>如何前往：</p>
+      <ol class="d-flex flex-column gap-3 list-decimal">
+        <li class="ps-1">搭乘捷運：紅線到正義站 3 號出口，延正義路方向至北信街交叉口即可。</li>
+        <li class="ps-1">搭乘公車：搭這些公車都可以抵達正義站 24B 25 33 50 76 77 77區 100</li>
+        <li class="ps-1">開車前往北信街 32 號，教室旁有專屬停車場可以使用。</li>
+      </ol>
+    </div>
+    <div class="offset-md-1 offset-lg-0 col-md-10 col-lg-6" data-aos="fade-left">
+      <form action="" class="bg-light rounded-bs p-4">
+        <fieldset class="text-secondary">
+          <legend class="fs-5 fw-regular mb-2 mb-md-3">意見回饋&問題詢問</legend>
+          <label for="userName" class="form-label">姓名</label>
+          <input type="text" name="userName" value="" placeholder="請輸入您的姓名" class="form-control mb-2">
+          <label for="userEmail" class="form-label">電子信箱</label>
+          <input type="email" name="userEmail" value="" placeholder="email@example.com" class="form-control mb-2">
+          <label for="userPhone" class="form-label">手機號碼</label>
+          <input type="tel" name="userPhone" value="" placeholder="0912-345-678" class="form-control mb-2">
+          <label for="userContact" class="form-label">意見回饋</label>
+          <textarea rows="8" cols="" name="userContact" class="form-control"></textarea>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</section>

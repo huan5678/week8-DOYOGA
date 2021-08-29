@@ -18,20 +18,34 @@
 	}
 }
 
-.scroll--style {
-	&::-webkit-scrollbar {
-		// display: none;
-		width: 0;
-		height: 0;
+.scroll{
+	&--none {
+		&::-webkit-scrollbar {
+			// display: none;
+			width: 0;
+			height: 0;
+		}
 	}
-	&::-webkit-scrollbar-track {
-		background: tint-color($primary, 40%);
-	}
-	&::-webkit-scrollbar-thumb {
-		border-radius: .25rem;
-		background: $primary;
+	&--style{
+		&::-webkit-scrollbar {
+			// display: none;
+			width: 0;
+			height: 0;
+		}
 		&:hover {
-			background: shade-color($primary, 40%);
+			&::-webkit-scrollbar{
+				height: .5rem;
+			}
+			&::-webkit-scrollbar-track {
+				background: tint-color($primary, 40%);
+			}
+			&::-webkit-scrollbar-thumb {
+				border-radius: .25rem;
+				background: $primary;
+				&:hover {
+					background: shade-color($primary, 40%);
+				}
+			}
 		}
 	}
 }

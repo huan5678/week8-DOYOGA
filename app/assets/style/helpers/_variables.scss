@@ -405,6 +405,7 @@ $spacers: (
   11: (88/$base)*$spacer, 
   12: (96/$base)*$spacer,
   13: (104/$base)*$spacer,
+  13\.75: (110/$base)*$spacer,
   xl: (192/$base)*$spacer,
   auto: auto
 ) !default;
@@ -419,6 +420,7 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) 
 // scss-docs-start position-map
 $position-values: (
   0: 0,
+  25: 25%,
   47: 47%,
   50: 50%,
   100: 100%,
@@ -584,7 +586,10 @@ $aspect-ratios: (
   "4x3": calc(3 / 4 * 100%),
   "16x9": calc(9 / 16 * 100%),
   "11x14": calc(11 / 14 * 100%),
-  "21x9": calc(9 / 21 * 100%)
+  "21x9": calc(9 / 21 * 100%),
+  "21x16": calc(16/21 * 100%),
+  "23x13": calc(13/23 * 100%),
+  "25x12": calc(12/25 * 100%),
 ) !default;
 // scss-docs-end aspect-ratios
 // stylelint-enable function-disallowed-list
@@ -722,36 +727,36 @@ $mark-bg:                     #fcf8e3 !default;
 // scss-docs-start table-variables
 $table-cell-padding-y:        .5rem !default;
 $table-cell-padding-x:        .5rem !default;
-$table-cell-padding-y-sm:     .25rem !default;
-$table-cell-padding-x-sm:     .25rem !default;
+$table-cell-padding-y-sm:     .5rem !default; //.25rem !default;
+$table-cell-padding-x-sm:     .5rem !default; //.25rem !default;
 
 $table-cell-vertical-align:   top !default;
 
-$table-color:                 $body-color !default;
-$table-bg:                    transparent !default;
+$table-color:                 $secondary !default; //$body-color !default;
+$table-bg:                    $white !default; //transparent !default;
 $table-accent-bg:             transparent !default;
 
-$table-th-font-weight:        null !default;
+$table-th-font-weight:        400 !default; //null !default;
 
 $table-striped-color:         $table-color !default;
 $table-striped-bg-factor:     .05 !default;
-$table-striped-bg:            rgba($black, $table-striped-bg-factor) !default;
+$table-striped-bg:            $light !default; //rgba($black, $table-striped-bg-factor) !default;
 
 $table-active-color:          $table-color !default;
 $table-active-bg-factor:      .1 !default;
-$table-active-bg:             rgba($black, $table-active-bg-factor) !default;
+$table-active-bg:             $light !default; //rgba($black, $table-active-bg-factor) !default;
 
 $table-hover-color:           $table-color !default;
 $table-hover-bg-factor:       .075 !default;
-$table-hover-bg:              rgba($black, $table-hover-bg-factor) !default;
+$table-hover-bg:              rgba($secondary, $table-hover-bg-factor) !default; //rgba($black, $table-hover-bg-factor) !default;
 
 $table-border-factor:         .1 !default;
 $table-border-width:          $border-width !default;
-$table-border-color:          $border-color !default;
+$table-border-color:          $secondary !default; //$border-color !default;
 
 $table-striped-order:         odd !default;
 
-$table-group-separator-color: currentColor !default;
+$table-group-separator-color: $light !default ;//currentColor !default;
 
 $table-caption-color:         $text-muted !default;
 
@@ -1434,12 +1439,12 @@ $toast-header-border-color:         rgba(0, 0, 0, .05) !default;
 // Badges
 
 // scss-docs-start badge-variables
-$badge-font-size:                   .75em !default;
-$badge-font-weight:                 $font-weight-bold !default;
+$badge-font-size:                   0.875rem !default;//.75em !default;
+$badge-font-weight:                 $font-weight-light !default;//$font-weight-bold !default;
 $badge-color:                       $white !default;
-$badge-padding-y:                   .35em !default;
-$badge-padding-x:                   .65em !default;
-$badge-border-radius:               $border-radius !default;
+$badge-padding-y:                   .25rem !default;
+$badge-padding-x:                   1rem !default;
+$badge-border-radius:               1rem !default;//$border-radius !default;
 // scss-docs-end badge-variables
 
 
@@ -1456,15 +1461,15 @@ $modal-dialog-margin-y-sm-up:       1.75rem !default;
 $modal-title-line-height:           $line-height-base !default;
 
 $modal-content-color:               null !default;
-$modal-content-bg:                  $white !default;
+$modal-content-bg:                  $primary !default; //$white !default;
 $modal-content-border-color:        rgba($black, .2) !default;
-$modal-content-border-width:        $border-width !default;
-$modal-content-border-radius:       $border-radius-lg !default;
+$modal-content-border-width:        0 ;//$border-width !default;
+$modal-content-border-radius:       1rem !default; //$border-radius-lg !default;
 $modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width) !default;
 $modal-content-box-shadow-xs:       $box-shadow-sm !default;
 $modal-content-box-shadow-sm-up:    $box-shadow !default;
 
-$modal-backdrop-bg:                 $black !default;
+$modal-backdrop-bg:                 $secondary !default; //$black !default;
 $modal-backdrop-opacity:            .5 !default;
 $modal-header-border-color:         $border-color !default;
 $modal-footer-border-color:         $modal-header-border-color !default;

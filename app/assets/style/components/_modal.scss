@@ -1,0 +1,13 @@
+
+.modal-dialog-width {
+  max-width: clamp($modal-sm, 345px, 80vw);
+  @include media-breakpoint-up(md){
+    max-width: clamp($modal-md, 640px, 80vw);
+  }
+  @include media-breakpoint-up(lg){
+    max-width: clamp($modal-lg, 960px, 80vw);
+  }
+  @include media-breakpoint-up(xl){
+    max-width: clamp($modal-xl, 80vw);
+  }
+}

@@ -116,14 +116,6 @@ $utilities: map-merge(
         class: z,
         values: $zindex,
       ),
-      "height": map-merge(
-        map-get($utilities,"height"),(
-          responsive: true,
-          values: (
-            $imgSizes
-          )
-        )
-      ),
       "viewport-height": (
         property: height,
         class: vh,
@@ -228,7 +220,7 @@ $utilities: map-merge(
     "whitespace": map-merge(
       map-get($utilities,"white-space"),(
       responsive: true,
-      class: wh,
+      class: ws,
       )
     ),
     "list-style": (
@@ -241,6 +233,17 @@ $utilities: map-merge(
         decimal: decimal,
       )
     ),
+    "gap": (
+      responsive: true,
+      property: gap,
+      values: $spacers
+    ),
+    "ratio":(
+      property: --dyg-aspect-ratio,
+      class: ratio,
+      responsive: true,
+      values: $aspect-ratios,
+    )
     )
   );
 
@@ -261,16 +264,3 @@ $utilities: map-merge(
       }
     }
   }
-
-  @each $size, $val in $spacers{
-    .g-#{$size}{
-      --#{$variable-prefix}gutter-y: #{$val} !important;
-      --#{$variable-prefix}gutter-x: #{$val} !important;
-    }
-  }
-
-.ratio-3x2 {
-  @include media-breakpoint-up(md){
-    --bs-aspect-ratio: 100%;
-  }
-}
