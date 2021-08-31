@@ -19,11 +19,15 @@
 }
 
 .scroll{
+	transition: all ease .3s;
 	&--none {
 		&::-webkit-scrollbar {
-			// display: none;
-			width: 0;
-			height: 0;
+			opacity: 0;
+		}
+		&:hover{
+			&::-webkit-scrollbar {
+				opacity: 1;
+			}
 		}
 	}
 	&--style{
@@ -48,6 +52,14 @@
 			}
 		}
 	}
+
+	&--up {
+		filter: drop-shadow(0 -10px 20px rgba($dark,0.25));
+	}
+
+	&--down {
+		transform: translate3d(0, -100%, 0);
+	}
 }
 
 .hero {
@@ -65,13 +77,3 @@
 }
 
 
-.scroll {
-	&--up {
-		filter: drop-shadow(0 -10px 20px rgba($dark,0.25));
-	}
-
-	&--down {
-		transform: translate3d(0, -100%, 0);
-	}
-
-}
