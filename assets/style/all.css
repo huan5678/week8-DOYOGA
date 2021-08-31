@@ -24907,18 +24907,8 @@ ul, ol {
   }
 }
 
-.scroll {
-  -webkit-transition: all ease .3s;
-  -o-transition: all ease .3s;
-  transition: all ease .3s;
-}
-
 .scroll--none::-webkit-scrollbar {
-  opacity: 0;
-}
-
-.scroll--none:hover::-webkit-scrollbar {
-  opacity: 1;
+  display: none;
 }
 
 .scroll--style::-webkit-scrollbar {
