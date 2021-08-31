@@ -24907,9 +24907,18 @@ ul, ol {
   }
 }
 
+.scroll {
+  -webkit-transition: all ease .3s;
+  -o-transition: all ease .3s;
+  transition: all ease .3s;
+}
+
 .scroll--none::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+  opacity: 0;
+}
+
+.scroll--none:hover::-webkit-scrollbar {
+  opacity: 1;
 }
 
 .scroll--style::-webkit-scrollbar {
@@ -24934,6 +24943,16 @@ ul, ol {
   background: #736263;
 }
 
+.scroll--up {
+  -webkit-filter: drop-shadow(0 -10px 20px rgba(112, 112, 112, 0.25));
+          filter: drop-shadow(0 -10px 20px rgba(112, 112, 112, 0.25));
+}
+
+.scroll--down {
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+}
+
 .hero {
   background-image: url("../images/photo-1612157777902-5382bc6e864b.jpeg");
   height: 36.375rem;
@@ -24949,16 +24968,6 @@ ul, ol {
   .ms-minus {
     margin-left: -5.9375rem;
   }
-}
-
-.scroll--up {
-  -webkit-filter: drop-shadow(0 -10px 20px rgba(112, 112, 112, 0.25));
-          filter: drop-shadow(0 -10px 20px rgba(112, 112, 112, 0.25));
-}
-
-.scroll--down {
-  -webkit-transform: translate3d(0, -100%, 0);
-          transform: translate3d(0, -100%, 0);
 }
 
 .btn-primary {
