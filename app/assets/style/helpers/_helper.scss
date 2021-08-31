@@ -19,16 +19,10 @@
 }
 
 .scroll{
-	transition: all ease .3s;
 	&--none {
 		&::-webkit-scrollbar {
-			opacity: 0;
-		}
-		&:hover{
-			&::-webkit-scrollbar {
-				opacity: 1;
+				display: none;
 			}
-		}
 	}
 	&--style{
 		&::-webkit-scrollbar {
