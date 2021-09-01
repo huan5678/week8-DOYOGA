@@ -243,6 +243,12 @@ $utilities: map-merge(
       class: ratio,
       responsive: true,
       values: $aspect-ratios,
+    ),
+    "max-height": (
+      responsive: true,
+      property: max-height,
+      class: mxh,
+      values: ( $imgSizes)
     )
     )
   );
