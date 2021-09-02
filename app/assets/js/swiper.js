@@ -30,9 +30,10 @@ const customSwiper = new Swiper(".customSwiper",{
 })
 
 const chooseSwiper = new Swiper(".chooseSwiper",{
-  slidesPerView: 1,
-  slidesPerColumn: 3,
-  spaceBetween: 24,
+      slidesPerView: 1,
+      slidesPerColumn: 3,
+      spaceBetween: 24,
+      slidesPerColumnFill: 'row',
   breakpoints: {
     768: {
       slidesPerView: 1.8,
@@ -70,6 +71,7 @@ const recommendSwiper = new Swiper(".recommendSwiper",{
   slidesPerView: 1.2,
   slidesPerColumn: 1,
   spaceBetween: 30,
+  loop: true,
   breakpoints:{
     768: {
       slidesPerView: 3,
