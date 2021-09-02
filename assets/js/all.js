@@ -11,11 +11,9 @@ window.addEventListener('scroll', function () {
   }
 
   if (currentScroll > lastScroll && !header.classList.contains('scroll--down')) {
-    // console.log('down !')
     header.classList.remove('scroll--up');
     header.classList.add('scroll--down');
   } else if (currentScroll < lastScroll && header.classList.contains('scroll--down')) {
-    // console.log('up !')
     header.classList.remove('scroll--down');
     header.classList.add('scroll--up');
   }
@@ -290,30 +288,36 @@ window.onload = function () {
   lax.addDriver('scrollY', function () {
     return window.scrollY;
   });
-  lax.addElements('.lax-slide-right', {
+  lax.addElements('.heroImg', {
     scrollY: {
-      translateX: [["elInY", "elCenterY", "elOutY"], // [0, 'screenWidth/2', 'screenWidth'],
-      [0, 80, 160]]
+      translateY: [['elInY', 'elCenterY', 'elOutY'], [0, 144, -480]]
     }
   });
-  lax.addElements('.lax-slide-left', {
+  lax.addElements('overlayImg', {
     scrollY: {
-      translateX: [["elInY", "elCenterY", "elOutY"], [0, -80, -160]]
-    }
-  });
-  lax.addElements('.lax-slide-bg-right', {
-    scrollY: {
-      translateX: [["elInY", "elCenterY", "elOutY"], [0, 80, 160]],
-      scale: [["elInY", "elCenterY", "elOutY"], [1.4, 1.3, 1.2]]
-    }
-  });
-  lax.addElements('.lax-slide-bg-left', {
-    scrollY: {
-      translateX: [["elInY", "elCenterY", "elOutY"], [0, -80, -160]],
-      scale: [["elInY", "elCenterY", "elOutY"], [1.4, 1.3, 1.2]]
+      translateY: [['elInY', 'elCenterY', 'elOutY'], [0, -160, -400]]
     }
   });
 };
+
+var teacherCard = document.querySelectorAll('.teacherCard');
+
+if (teacherCard.length !== 0) {
+  var cardSetHeight = function cardSetHeight() {
+    setTimeout(function () {
+      var teacherCardHeight = teacherCard[1].offsetHeight;
+      teacherCard1.style.height = "".concat(teacherCardHeight, "px");
+      teacherCard3.style.height = "".concat(teacherCardHeight, "px");
+      teacherCard4.style.height = "".concat(teacherCardHeight, "px");
+    }, 0, 3);
+  };
+
+  var teacherCard1 = teacherCard[0];
+  var teacherCard3 = teacherCard[2];
+  var teacherCard4 = teacherCard[3];
+  $(window).ready(cardSetHeight);
+  $(window).resize(cardSetHeight);
+}
 "use strict";
 
 var inputDate = document.querySelector('input[name="datePicker"]');

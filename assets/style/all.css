@@ -12923,6 +12923,76 @@ fieldset:disabled .btn {
      object-fit: scale-down !important;
 }
 
+.object-start {
+  -o-object-position: left !important;
+     object-position: left !important;
+}
+
+.object-end {
+  -o-object-position: right !important;
+     object-position: right !important;
+}
+
+.object-top {
+  -o-object-position: top !important;
+     object-position: top !important;
+}
+
+.object-center {
+  -o-object-position: center !important;
+     object-position: center !important;
+}
+
+.object-bottom {
+  -o-object-position: bottom !important;
+     object-position: bottom !important;
+}
+
+.object-start-bottom {
+  -o-object-position: left bottom !important;
+     object-position: left bottom !important;
+}
+
+.object-start-top {
+  -o-object-position: left top !important;
+     object-position: left top !important;
+}
+
+.object-end-bottom {
+  -o-object-position: right bottom !important;
+     object-position: right bottom !important;
+}
+
+.object-end-top {
+  -o-object-position: right top !important;
+     object-position: right top !important;
+}
+
+.object-start-center {
+  -o-object-position: left center !important;
+     object-position: left center !important;
+}
+
+.object-end-center {
+  -o-object-position: right center !important;
+     object-position: right center !important;
+}
+
+.object-center-center {
+  -o-object-position: center center !important;
+     object-position: center center !important;
+}
+
+.object-center-top {
+  -o-object-position: center top !important;
+     object-position: center top !important;
+}
+
+.object-center-bottom {
+  -o-object-position: center bottom !important;
+     object-position: center bottom !important;
+}
+
 .bg-repeat {
   background-repeat: repeat !important;
 }
@@ -25599,17 +25669,6 @@ ul, ol {
           transform: translate3d(0, -100%, 0);
 }
 
-.hero {
-  background-image: url("../images/photo-1612157777902-5382bc6e864b.jpeg");
-  height: 35rem;
-}
-
-@media (min-width: 768px) {
-  .hero {
-    height: 36.375rem;
-  }
-}
-
 @media (min-width: 992px) {
   .ms-minus {
     margin-left: -5.9375rem;
@@ -25867,6 +25926,23 @@ ul, ol {
   .modal-dialog-width {
     max-width: clamp(1140px, 80vw);
   }
+}
+
+.hero {
+  height: 35rem;
+  max-height: 40rem;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 36.375rem;
+    max-height: 41.375rem;
+  }
+}
+
+.hero--clip {
+  z-index: -1;
+  clip: rect(0, auto, auto, 0);
 }
 
 .logo {
