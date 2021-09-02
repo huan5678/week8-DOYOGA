@@ -67,8 +67,8 @@
         <li id="step-3" class="col col-md-2 breadcrumb-item">完成預約</li>
       </ul>
       <div id="page-1-list" class="row gap-2 gap-md-3 gap-lg-0 mb-5 mb-md-6 mb-lg-4">
-          <div class="col-lg-4" id="experienceCourse"  data-aos="fade-up">
-            <div class="card border-1 border-primary overflow-hidden">
+          <div class="col-lg-4" data-aos="fade-up">
+            <div class="card border-1 border-primary overflow-hidden shadow-lg-hover" id="experienceCourse">
               <div class="d-md-flex d-lg-block justify-between">
                 <div class="ratio ratio-4x3 mxh-30.375 mxh-md-29.75 mxh-lg-30.375">
                   <img src="./assets/images/woman in white tank top and white leggings bending her body.jpg" alt="" class=" object-cover">
@@ -77,7 +77,7 @@
                     <h3 class="card-title text-center text-md-start text-lg-center text-secondary fw-regular fs-5 mb-0.5">首次體驗</h3>
                     <p class="card-text text-center text-md-start text-lg-center text-primary fs-5 mb-1">NT $450 / 次</p>
                     <p class="card-text text-primary mb-5 mb-md-3 mb-lg-5">分基礎、中級、高級可以選擇。初次至 DOYOGA 上課建議選擇此方案。</p>
-                    <a href="#listCollapse,#continueBtn,#arrowExperience" class="btn btn-primary w-100 stretched-link orderBtn" data-bs-toggle="collapse">選擇課程</a>
+                    <a href="#continueBtn" class="btn btn-primary w-100 stretched-link orderBtn" data-bs-toggle="collapse">選擇課程</a>
                   </div>
               </div>
             </div>
@@ -89,8 +89,8 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4" id="shortCourse" data-aos="fade-up" data-aos-delay="300">
-            <div class="card border-1 border-primary overflow-hidden">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card border-1 border-primary overflow-hidden shadow-lg-hover" id="shortCourse">
               <div class="d-md-flex d-lg-block justify-between">
                 <div class="ratio ratio-4x3 mxh-30.375 mxh-md-29.75 mxh-lg-30.375">
                   <img src="./assets/images/woman performing yoga.jpg" alt="" class=" object-cover">
@@ -99,7 +99,7 @@
                   <h3 class="card-title text-center text-md-start text-lg-center text-secondary fw-regular fs-5 mb-0.5">短期體驗</h3>
                   <p class="card-text text-center text-md-start text-lg-center text-primary fs-5 mb-1">NT $1880 / 月</p>
                   <p class="card-text text-primary mb-5 mb-md-3 mb-lg-5">分基礎、中級、高級可以選擇。想試著培養瑜珈習慣者可以選擇此方案。</p>
-                  <a href="#listCollapse,#continueBtn,#arrowShort" class="btn btn-primary w-100 stretched-link orderBtn" data-bs-toggle="collapse">選擇課程</a>
+                  <a href="#continueBtn" class="btn btn-primary w-100 stretched-link orderBtn" data-bs-toggle="collapse">選擇課程</a>
                 </div>
               </div>
             </div>
@@ -111,8 +111,8 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4" id="longCourse" data-aos="fade-up" data-aos-delay="600">
-            <div class="card border-1 border-primary overflow-hidden">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="card border-1 border-primary overflow-hidden shadow-lg-hover" id="longCourse">
               <div class="d-md-flex d-lg-block justify-between">
                 <div class="ratio ratio-4x3 mxh-30.375 mxh-md-29.75 mxh-lg-30.375">
                   <img src="./assets/images/woman in blue leggings and black tank top doing yoga.jpg" alt="" class=" object-cover">
@@ -121,7 +121,7 @@
                   <h3 class="card-title text-center text-md-start text-lg-center  text-secondary fw-regular fs-5 mb-0.5">長期體驗</h3>
                   <p class="card-text text-center text-md-start text-lg-center  text-primary fs-5 mb-1">NT $5600 / 季</p>
                   <p class="card-text text-primary mb-5 mb-md-3 mb-lg-5">分基礎、中級、高級可以選擇。有長期習慣做瑜伽者建議選擇此方案。</p>
-                  <a href="#listCollapse,#continueBtn,#arrowLong" class="btn btn-primary w-100 stretched-link orderBtn" data-bs-toggle="collapse">選擇課程</a>
+                  <a href="#continueBtn" class="btn btn-primary w-100 stretched-link orderBtn" data-bs-toggle="collapse">選擇課程</a>
                 </div>
               </div>
             </div>
@@ -321,8 +321,8 @@
     <section class="mb-5 collapse" id="listCollapse">
         <div class="bg-secondary pt-4 pb-6 mb-4">
           <h2 class="text-white text-center fw-regular fs-3 mb-3">選擇課程階級</h2>
-          <div class="container swiper-container chooseSwiper">
-            <ul class=" swiper-wrapper gap-3">
+          <div class="swiper-container chooseSwiper container">
+            <ul class="swiper-wrapper">
               <li class="swiper-slide">
                 <div id="classBasic" class="card shoadow bg-primary">
                   <div class="card-body text-white">
@@ -410,9 +410,9 @@
 
     <div class="pos-fixed top-50 end-0 translate-middle z-500">
       <ul class="d-none d-xl-flex flex-column justify-between list-unstyled">
-        <li class="gap-1"><a href="#" class="display-5 link-secondary"><i class="fab fa-facebook"></i></a></li>
-        <li class="gap-1"><a href="#" class="display-5 link-secondary"><i class="fab fa-instagram"></i></a></li>
-        <li class="gap-1"><a href="#" class="display-5 link-secondary"><i class="fab fa-line"></i></a></li>
+        <li class="gap-1 link__icon"><a href="#" class="display-5 link-secondary"><i class="fab fa-facebook"></i></a></li>
+        <li class="gap-1 link__icon"><a href="#" class="display-5 link-secondary"><i class="fab fa-instagram"></i></a></li>
+        <li class="gap-1 link__icon"><a href="#" class="display-5 link-secondary"><i class="fab fa-line"></i></a></li>
       </ul>
     </div>
     </main>

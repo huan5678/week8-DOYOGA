@@ -151,17 +151,110 @@ $(window).resize(function () {
   }
 });
 screen.addListener(chooseCourse);
+var experienceCourseStatus = false;
+var shortCourseStatus = false;
+var longCourseStatus = false;
+
+var checkListCollapse = function checkListCollapse() {
+  if ($('#listCollapse').hasClass("show")) {
+    $('#listCollapse').removeClass("show");
+  } else {
+    $('#listCollapse').toggleClass("show");
+  }
+};
+
 $("#experienceCourse").click(function () {
-  $(this).children().toggleClass("border-4");
-  $('.courseName').text("首次");
+  if (experienceCourseStatus === false) {
+    $(this).toggleClass("border-4");
+    $('#listCollapse').toggleClass("show");
+    $("#arrowExperience").toggleClass("show");
+    $('.courseName').text("首次");
+    experienceCourseStatus = true;
+
+    if (shortCourseStatus === true || longCourseStatus === true) {
+      if (shortCourseStatus === true) {
+        shortCourseStatus = false;
+      }
+
+      if (longCourseStatus === true) {
+        longCourseStatus = false;
+      }
+
+      checkListCollapse();
+      $("#arrowLong").removeClass("show");
+      $("#arrowShort").removeClass("show");
+      $("#longCourse").removeClass("border-4");
+      $("#shortCourse").removeClass("border-4");
+    }
+  } else {
+    $(this).toggleClass("border-4");
+    $("#arrowExperience").toggleClass("show");
+    $('#listCollapse').removeClass("show");
+    $('.courseName').text("");
+    experienceCourseStatus = false;
+  }
 });
 $("#shortCourse").click(function () {
-  $(this).children().toggleClass("border-4");
-  $('.courseName').text("短期");
+  if (shortCourseStatus === false) {
+    $(this).toggleClass("border-4");
+    $("#arrowShort").toggleClass("show");
+    $('#listCollapse').toggleClass("show");
+    $('.courseName').text("短期");
+    shortCourseStatus = true;
+
+    if (experienceCourseStatus === true || longCourseStatus === true) {
+      if (experienceCourseStatus === true) {
+        experienceCourseStatus = false;
+      }
+
+      if (longCourseStatus === true) {
+        longCourseStatus = false;
+      }
+
+      checkListCollapse();
+      $("#arrowLong").removeClass("show");
+      $("#arrowExperience").removeClass("show");
+      $("#longCourse").removeClass("border-4");
+      $("#experienceCourse").removeClass("border-4");
+    }
+  } else {
+    $(this).toggleClass("border-4");
+    $("#arrowShort").toggleClass("show");
+    $('#listCollapse').removeClass("show");
+    $('.courseName').text("");
+    shortCourseStatus = false;
+  }
 });
 $("#longCourse").click(function () {
-  $(this).children().toggleClass("border-4");
-  $('.courseName').text("長期");
+  if (longCourseStatus === false) {
+    $(this).toggleClass("border-4");
+    $("#arrowLong").toggleClass("show");
+    $('#listCollapse').toggleClass("show");
+    $('.courseName').text("長期");
+    longCourseStatus = true;
+
+    if (experienceCourseStatus === true || shortCourseStatus === true) {
+      if (experienceCourseStatus === true) {
+        experienceCourseStatus = false;
+      }
+
+      if (shortCourseStatus === true) {
+        shortCourseStatus = false;
+      }
+
+      checkListCollapse();
+      $("#arrowShort").removeClass("show");
+      $("#arrowExperience").removeClass("show");
+      $("#experienceCourse").removeClass("border-4");
+      $("#shortCourse").removeClass("border-4");
+    }
+  } else {
+    $(this).toggleClass("border-4");
+    $("#arrowLong").toggleClass("show");
+    $('#listCollapse').removeClass("show");
+    $('.courseName').text("");
+    longCourseStatus = false;
+  }
 });
 var selectRange = false;
 $("#classBasic").click(function () {
@@ -176,7 +269,7 @@ $("#classBasic").click(function () {
     selectRange = true;
   } else {
     $("*").find(".checkBtn").addClass("opacity-30");
-    $("*").find(".border-4").removeClass("border-4 border-white");
+    $(this).removeClass("border-4 border-white");
 
     if ($('.courseRange')[0].innerText.length !== 0) {
       $('.courseRange').empty();
@@ -197,7 +290,7 @@ $("#classIntermediate").click(function () {
     selectRange = true;
   } else {
     $("*").find(".checkBtn").addClass("opacity-30");
-    $("*").find(".border-4").removeClass("border-4 border-white");
+    $(this).removeClass("border-4 border-white");
 
     if ($('.courseRange')[0].innerText.length !== 0) {
       $('.courseRange').empty();
@@ -218,7 +311,7 @@ $("#classAdvanced").click(function () {
     selectRange = true;
   } else {
     $("*").find(".checkBtn").addClass("opacity-30");
-    $("*").find(".border-4").removeClass("border-4 border-white");
+    $(this).removeClass("border-4 border-white");
 
     if ($('.courseRange')[0].innerText.length !== 0) {
       $('.courseRange').empty();
@@ -363,6 +456,7 @@ var chooseSwiper = new Swiper(".chooseSwiper", {
   slidesPerView: 1,
   slidesPerColumn: 3,
   spaceBetween: 24,
+  slidesPerColumnFill: 'row',
   breakpoints: {
     768: {
       slidesPerView: 1.8,
@@ -398,6 +492,7 @@ var recommendSwiper = new Swiper(".recommendSwiper", {
   slidesPerView: 1.2,
   slidesPerColumn: 1,
   spaceBetween: 30,
+  loop: true,
   breakpoints: {
     768: {
       slidesPerView: 3,
