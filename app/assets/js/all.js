@@ -9,11 +9,9 @@ window.addEventListener('scroll',function(){
   }
 
   if(currentScroll > lastScroll && !header.classList.contains('scroll--down')){
-    // console.log('down !')
     header.classList.remove('scroll--up');
     header.classList.add('scroll--down');
   } else if(currentScroll < lastScroll && header.classList.contains('scroll--down')){
-    // console.log('up !')
     header.classList.remove('scroll--down');
     header.classList.add('scroll--up');
   }
@@ -279,49 +277,44 @@ window.onload = function () {
     return window.scrollY
   })
 
-  lax.addElements('.lax-slide-right',{
-    scrollY: {
-      translateX: [
-        ["elInY", "elCenterY", "elOutY"],
-        // [0, 'screenWidth/2', 'screenWidth'],
-        [0, 80, 160],
-      ]
+  lax.addElements(
+    '.heroImg',
+    {
+      scrollY: {
+        translateY: [
+          ['elInY', 'elCenterY', 'elOutY'],
+          [0, 144,-480]
+        ]
+      }
     }
-  })
-
-  lax.addElements('.lax-slide-left',{
-    scrollY: {
-      translateX: [
-        ["elInY", "elCenterY", "elOutY"],
-        [0, -80, -160],
-      ]
+  )
+  
+  lax.addElements(
+    'overlayImg',
+    {
+      scrollY: {
+        translateY: [
+          ['elInY', 'elCenterY', 'elOutY'],
+          [0, -160,-400]
+        ]
+      }
     }
-  })
+  )
+}
 
-  lax.addElements('.lax-slide-bg-right',{
-    scrollY: {
-      translateX: [
-        ["elInY", "elCenterY", "elOutY"],
-        [0, 80, 160],
-      ],
-      scale: [
-        ["elInY", "elCenterY", "elOutY"],
-        [1.4, 1.3, 1.2],
-      ]
-    }
-  })
-
-  lax.addElements('.lax-slide-bg-left',{
-    scrollY: {
-      translateX: [
-        ["elInY", "elCenterY", "elOutY"],
-        [0, -80, -160],
-      ],
-      scale: [
-        ["elInY", "elCenterY", "elOutY"],
-        [1.4, 1.3, 1.2],
-      ]
-    }
-  })
-
+const teacherCard = document.querySelectorAll('.teacherCard');
+if (teacherCard.length !== 0){
+  const teacherCard1 = teacherCard[0];
+  const teacherCard3 = teacherCard[2];
+  const teacherCard4 = teacherCard[3];
+  function cardSetHeight(){
+    setTimeout(() => {
+      const teacherCardHeight = teacherCard[1].offsetHeight;
+      teacherCard1.style.height = `${teacherCardHeight}px`;
+      teacherCard3.style.height = `${teacherCardHeight}px`;
+      teacherCard4.style.height = `${teacherCardHeight}px`;
+    }, 0,3);
+  }
+  $(window).ready(cardSetHeight);
+  $(window).resize(cardSetHeight);
 }

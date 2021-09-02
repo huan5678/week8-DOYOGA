@@ -1,0 +1,12 @@
+.hero {
+	height: 35rem;
+  max-height: 40rem;
+	@include media-breakpoint-up(md){
+		height: 36.375rem;
+    max-height: 41.375rem;
+	}
+	&--clip {
+		z-index: -1;
+		clip: rect(0, auto, auto, 0);
+	}
+}

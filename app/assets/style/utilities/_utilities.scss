@@ -80,12 +80,7 @@ $utilities: map-merge(
           property: overflow,
           state: hover,
           class: overflow,
-          values: (
-            auto: auto,
-            hidden: hidden,
-            visible: visible,
-            scroll: scroll
-          )
+          values: ( auto, hidden, visible, scroll)
         )
       ),
       "overflow-x": map-merge(
@@ -158,6 +153,26 @@ $utilities: map-merge(
         class: object,
         values: $object-fitVal,
       ),
+      "object-position":(
+        property: object-position,
+        class: object,
+        values: (
+          start: left,
+          end: right,
+          top: top,
+          center: center,
+          bottom: bottom,
+          start-bottom: left bottom,
+          start-top: left top,
+          end-bottom: right bottom,
+          end-top: right top,
+          start-center: left center,
+          end-center: right center,
+          center-center: center center,
+          center-top: center top,
+          center-bottom: center bottom,
+        )
+      ),
       "rounded": (
       property: border-radius,
       class: rounded,
@@ -226,12 +241,7 @@ $utilities: map-merge(
     "list-style": (
       property: list-style-type,
       class: list,
-      values: (
-        disc: disc,
-        circle: circle,
-        square: square,
-        decimal: decimal,
-      )
+      values: ( disc, circle, square, decimal)
     ),
     "gap": (
       responsive: true,
