@@ -457,6 +457,8 @@ var chooseSwiper = new Swiper(".chooseSwiper", {
   slidesPerColumn: 3,
   spaceBetween: 24,
   slidesPerColumnFill: 'row',
+  observer: true,
+  observeParents: true,
   breakpoints: {
     768: {
       slidesPerView: 1.8,
